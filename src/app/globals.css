@@ -1,26 +1,13 @@
-@import "tailwindcss";
+/* These are the core Tailwind CSS directives. They are replaced by Tailwind's generated CSS. */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
+/* Custom global styles for your project can go below the Tailwind directives. */
+/* This ensures Tailwind's styles can override your base styles if needed. */
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Inter', sans-serif; /* Ensures the Inter font is applied globally */
+  margin: 0; /* Removes default browser margin around the body */
+  -webkit-font-smoothing: antialiased; /* Improves font rendering on WebKit browsers (like Chrome, Safari) */
+  -moz-osx-font-smoothing: grayscale; /* Improves font rendering on Mozilla browsers (like Firefox) */
 }
