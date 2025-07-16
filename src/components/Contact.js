@@ -282,7 +282,7 @@ function Contact() {
                         </a>
 
                         <a
-                            href="https://linkedin.com/in/anjali-bhimani"
+                            href="https://www.linkedin.com/in/anjali-bhimani-386028276"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="flex items-center p-4 bg-gray-700/50 border border-gray-600/50 rounded-lg hover:border-cyan-400/30 hover:bg-gray-600/50 transition-all duration-300 group"

@@ -105,7 +105,7 @@ function About() {
             {/* CTA Buttons */}
             < div className="flex flex-wrap justify-center gap-4 relative z-10" >
                 <a
-                    href="www.linkedin.com/in/anjali-bhimani-386028276"
+                    href="https://www.linkedin.com/in/anjali-bhimani-386028276"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center px-6 py-3 bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-500 hover:to-blue-500 text-white rounded-lg transition-all duration-300 shadow-lg hover:shadow-cyan-500/25 hover:scale-105 font-medium group"
