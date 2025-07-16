@@ -6,8 +6,30 @@
 /* Custom global styles for your project can go below the Tailwind directives. */
 /* This ensures Tailwind's styles can override your base styles if needed. */
 body {
-  font-family: 'Inter', sans-serif; /* Ensures the Inter font is applied globally */
-  margin: 0; /* Removes default browser margin around the body */
-  -webkit-font-smoothing: antialiased; /* Improves font rendering on WebKit browsers (like Chrome, Safari) */
-  -moz-osx-font-smoothing: grayscale; /* Improves font rendering on Mozilla browsers (like Firefox) */
+  font-family: 'Inter', sans-serif;
+  /* Ensures the Inter font is applied globally */
+  margin: 0;
+  /* Removes default browser margin around the body */
+  -webkit-font-smoothing: antialiased;
+  /* Improves font rendering on WebKit browsers (like Chrome, Safari) */
+  -moz-osx-font-smoothing: grayscale;
+  /* Improves font rendering on Mozilla browsers (like Firefox) */
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.break-words {
+  word-wrap: break-word;
+  word-break: break-word;
 }

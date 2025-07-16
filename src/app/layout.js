@@ -4,6 +4,7 @@ import './globals.css'; // Import your global CSS (Tailwind)
 export const metadata = {
   title: 'Anjali Bhimani\'s Portfolio',
   description: 'A personal portfolio website for Anjali Bhimani, showcasing projects and experience.',
+  viewport: 'width=device-width, initial-scale=1.0',
 };
 
 export default function RootLayout({ children }) {
@@ -13,3 +14,5 @@ export default function RootLayout({ children }) {
     </html>
   );
 }
+
+
