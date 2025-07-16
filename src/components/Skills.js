@@ -28,8 +28,8 @@ function Skills() {
     }, [activeCategory]); // Re-run effect when activeCategory changes to observe new items
 
     const skillCategories = {
-        technical: {
-            title: "Technical Skills",
+        programmingAndDev: {
+            title: "Programming & Development",
             icon: Code,
             skills: [
                 {
@@ -43,19 +43,9 @@ function Skills() {
                     logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
                 },
                 {
-                    name: "Node.js",
-                    description: "Server-side JavaScript",
-                    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
-                },
-                {
                     name: "Python",
                     description: "Backend Development",
                     logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
-                },
-                {
-                    name: "TypeScript",
-                    description: "Typed JavaScript",
-                    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg"
                 },
                 {
                     name: "HTML/CSS",
@@ -64,174 +54,129 @@ function Skills() {
                 }
             ]
         },
-        database: {
-            title: "Database & Backend",
+        databaseAndCloud: {
+            title: "Databases & Cloud Technologies",
             icon: Database,
             skills: [
-                {
-                    name: "MongoDB",
-                    description: "NoSQL Database",
-                    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg"
-                },
                 {
                     name: "PostgreSQL",
                     description: "Relational Database",
                     logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg"
-                },
-                {
-                    name: "GraphQL",
-                    description: "Query Language",
-                    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/graphql/graphql-plain.svg"
-                },
-                {
-                    name: "Redis",
-                    description: "In-memory Database",
-                    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redis/redis-original.svg"
-                },
-                {
-                    name: "MySQL",
-                    description: "SQL Database",
-                    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg"
                 }
             ]
         },
-        tools: {
-            title: "Tools & Platforms",
-            icon: Wrench,
+        softSkills: {
+            title: "Soft Skills",
+            icon: Users,
             skills: [
                 {
-                    name: "AWS",
-                    description: "Cloud Computing",
+                    name: "Communication",
+                    description: "Effective communication skills",
                     logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-plain-wordmark.svg"
                 },
                 {
-                    name: "Docker",
-                    description: "Containerization",
+                    name: "Leadership",
+                    description: "Team leadership and motivation",
                     logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg"
                 },
                 {
-                    name: "Git",
-                    description: "Version Control",
+                    name: "Writing",
+                    description: "Technical and academic writing",
                     logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"
                 },
                 {
-                    name: "Kubernetes",
-                    description: "Container Orchestration",
+                    name: "Research",
+                    description: "Analytical and applied research",
                     logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg"
                 },
                 {
-                    name: "Jenkins",
-                    description: "CI/CD Pipeline",
+                    name: "Critical Thinking",
+                    description: "Objective analysis and evaluation of issues",
                     logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jenkins/jenkins-original.svg"
                 },
                 {
-                    name: "Terraform",
-                    description: "Infrastructure as Code",
+                    name: "Collaboration",
+                    description: "Teamwork and cooperative skills",
+                    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/terraform/terraform-original.svg"
+                },
+                {
+                    name: "Problem Solving",
+                    description: "Identifying solutions to complex challenges",
                     logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/terraform/terraform-original.svg"
                 }
             ]
         },
-        design: {
-            title: "Design & Frontend",
-            icon: Globe,
+        productivity: {
+            title: "Productivity Tools",
+            icon: Wrench,
             skills: [
                 {
-                    name: "Tailwind CSS",
-                    description: "Utility-first CSS",
+                    name: "Google Documents",
+                    description: "Document creation and collaboration",
                     logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg"
                 },
                 {
-                    name: "Figma",
-                    description: "Design & Prototyping",
+                    name: "Google Spreadsheets",
+                    description: "Spreadsheet management",
                     logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg"
                 },
                 {
-                    name: "Sass/SCSS",
-                    description: "CSS Preprocessor",
+                    name: "Google Slides",
+                    description: "Presentation creation",
                     logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg"
                 },
                 {
-                    name: "Material UI",
-                    description: "React Component Library",
+                    name: "Google Forms",
+                    description: "Form creation and data collection",
+                    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg"
+                },
+                {
+                    name: "Microsoft PowerPoint",
+                    description: "Presentation software",
                     logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/materialui/materialui-original.svg"
                 },
                 {
-                    name: "Vue.js",
-                    description: "Progressive Framework",
+                    name: "Microsoft Excel",
+                    description: "Spreadsheet and data analysis",
+                    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg"
+                },
+                {
+                    name: "Microsoft Word",
+                    description: "Document processing",
+                    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg"
+                },
+                {
+                    name: "Notion",
+                    description: "All-in-one workspace and note-taking",
                     logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg"
                 }
             ]
         },
-        soft: {
-            title: "Professional Skills",
-            icon: Users,
+        certifications: {
+            title: "Certifications, Awards, & Courses",
+            icon: Award,
             skills: [
                 {
-                    name: "Team Leadership",
-                    description: "Guiding Development Teams",
-                    logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Circle-icons-lightbulb.svg/1200px-Circle-icons-lightbulb.svg.png"
+                    name: "VEX Robotics Spin Up",
+                    description: "2nd place at 2022 Swiss Qualifications",
+                    logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Circle-icons-lightbulb.svg/1200px-Circle-icons-lightbulb.svg.png",
+                    year: "2022"
                 },
                 {
                     name: "Agile/Scrum",
                     description: "Project Management",
                     logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Scrum_logo.svg/1200px-Scrum_logo.svg.png"
-                },
-                {
-                    name: "Communication",
-                    description: "Effective Verbal & Written",
-                    logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Speech_bubble_icon_%28grey%29.svg/1200px-Speech_bubble_icon_%28grey%29.svg.png"
-                },
-                {
-                    name: "Problem Solving",
-                    description: "Analytical & Critical Thinking",
-                    logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Gear_icon_2.svg/1200px-Gear_icon_2.svg.png"
-                },
-                {
-                    name: "Client Relations",
-                    description: "Building Strong Relationships",
-                    logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Handshake_icon_transparent.svg/1200px-Handshake_icon_transparent.svg.png"
                 }
             ]
         },
-        certifications: {
-            title: "Certifications",
-            icon: Award,
-            skills: [
-                {
-                    name: "AWS Certified Developer",
-                    description: "Cloud Development",
-                    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-plain-wordmark.svg",
-                    year: "2023"
-                },
-                {
-                    name: "Google Cloud Professional",
-                    description: "Cloud Architecture",
-                    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-original.svg",
-                    year: "2023"
-                },
-                {
-                    name: "React Professional",
-                    description: "Frontend Mastery",
-                    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
-                    year: "2022"
-                },
-                {
-                    name: "Kubernetes Administrator",
-                    description: "Container Orchestration",
-                    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg",
-                    year: "2023"
-                }
-            ]
-        }
     };
 
     const categories = [
-        { id: 'technical', label: 'Technical', icon: Code },
-        { id: 'database', label: 'Database', icon: Database },
-        { id: 'tools', label: 'Tools', icon: Wrench },
-        { id: 'design', label: 'Design', icon: Globe },
-        { id: 'soft', label: 'Professional', icon: Users },
-        { id: 'certifications', label: 'Certifications', icon: Award }
+        { id: 'programmingAndDev', label: 'Programming & Development', icon: Code },
+        { id: 'databaseAndCloud', label: 'Databases & Cloud Technologies', icon: Database },
+        { id: 'softSkills', label: 'Soft Skills', icon: Users },
+        { id: 'productivity', label: 'Productivity Tools', icon: Wrench },
+        { id: 'certifications', label: 'Certifications, Awards, & Courses', icon: Award }
     ];
 
     const currentCategory = skillCategories[activeCategory];
