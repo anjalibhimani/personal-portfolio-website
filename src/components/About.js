@@ -35,9 +35,9 @@ function About() {
     };
 
     const stats = [
-        { value: "3+", label: "Years Experience", icon: Code },
-        { value: "15+", label: "Projects Completed", icon: Sparkles },
-        { value: "∞", label: "Cups of Coffee", icon: Coffee }
+        { value: "5+", label: "Years Coding", icon: Code },
+        { value: "2", label: "Independent Projects", icon: Sparkles },
+        { value: "∞", label: "Iced Lattes", icon: Coffee }
     ];
 
     return (
@@ -86,9 +86,7 @@ function About() {
             <div className="mb-12 relative z-10">
                 <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8 max-w-4xl mx-auto">
                     <User className="inline-block mr-2 text-cyan-400" size={20} />
-                    I'm passionate about <span className="text-cyan-400 font-medium">creating beautiful digital experiences</span> and
-                    building <span className="text-cyan-400 font-medium">innovative solutions</span> that make a difference.
-                    With expertise in modern web technologies, I transform ideas into impactful applications.
+                    I'm passionate about <span className="text-cyan-400 font-medium">leveraging technology and tools</span> to build <span className="text-cyan-400 font-medium"> innovative solutions</span> Practical, impactful solutions </span> that improve people's lives. With a focus on modern web technologies, I am to create </span> to build <span className="text-cyan-400 font-medium">reliable, user-focused applications</span> that can make a difference. 
                 </p>
             </div>
 
@@ -106,7 +104,7 @@ function About() {
             {/* CTA Buttons */}
             <div className="flex flex-wrap justify-center gap-4 relative z-10">
                 <a
-                    href="https://www.linkedin.com/in/anjali-bhimani"
+                    href="www.linkedin.com/in/anjali-bhimani-386028276"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center px-6 py-3 bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-500 hover:to-blue-500 text-white rounded-lg transition-all duration-300 shadow-lg hover:shadow-cyan-500/25 hover:scale-105 font-medium group"
