@@ -1,111 +1,116 @@
-import React, { useState, useEffect } from 'react';
-import { Briefcase, Calendar, MapPin, TrendingUp, Users, Award } from 'lucide-react';
+import React, { useState, useEffect, useRef } from 'react';
+import { Briefcase, Calendar, MapPin } from 'lucide-react';
 
 function Experience() {
-    const [visibleItems, setVisibleItems] = useState([]);
-    const [activeTab, setActiveTab] = useState(0);
 
+    // state to know which experince is being viewed by the user
+    const [visibleItems, setVisibleItems] = useState([]);
+
+    // refs to get all the experience elements for intersection observer without re-rendering
+    const experienceRefs = useRef([]);
+
+    // using intersectionObserver to fade in the experience for UI
     useEffect(() => {
         const observer = new IntersectionObserver(
             (entries) => {
-                entries.forEach((entry) => {
-                    if (entry.isIntersecting) {
-                        const index = parseInt(entry.target.dataset.index);
-                        setVisibleItems(prev => [...prev, index]);
+                
+                //use set to avoid duplicates with mult elements being viewed on a screen
+                setVisibleItems((prev) => {
+                    const newItems = new Set(prev);
+
+                // for all observed elements, if visible right now then add that element index to set
+                    entries.forEach((entry) => {
+                        if (entry.isIntersecting) {
+                            newItems.add(parseInt(entry.target.dataset.index));
                     }
                 });
+                    
+            // return the new state with newly viewed elements as ana array again
+            return [...newItems];
+            });
             },
-            { threshold: 0.1 }
-        );
+            
+            { threshold: 0.1 } );
 
-        const items = document.querySelectorAll('.experience-item');
-        items.forEach(item => observer.observe(item));
-
+        // observe all experience elements using refs for monitoring 
+        experienceRefs.current = experienceRefs.current.slice(0, experiences.length);
+        experienceRefs.current.forEach(item => item && observer.observe(item));
+        
         return () => observer.disconnect();
     }, []);
 
+    // array to hold all the experiences data 
     const experiences = [
         {
-            title: "Senior Full Stack Developer",
-            company: "Tech Innovations Inc.",
-            location: "San Francisco, CA",
-            period: "January 2022 – Present",
-            type: "Full-time",
-            logo: "https://placehold.co/60x60/0F172A/38BDF8?text=TI",
+            title: "Business Development Intern",
+            company: "Formel Skin",
+            location: "Berlin, Germany",
+            period: "June 2025 – August 2025",
+            type: "Internship",
+            logo: "https://play-lh.googleusercontent.com/5J-pt61y1Lh7lgreFRuZTGAFxQHaG5beUwGVJfQO-mqow6JqVCKn_fqbW_Y23wsLFA=w600-h300-pc0xffffff-pd",
             achievements: [
-                "Led a cross-functional team of 8 developers in architecting and launching a microservices platform, resulting in 40% improved system performance",
-                "Implemented AI-powered features using TensorFlow and Python, increasing user engagement by 35%",
-                "Mentored 5 junior developers and established coding standards that reduced bug reports by 50%",
-                "Spearheaded the migration to React 18 and Next.js, improving application load times by 60%"
+                "Analyzed and compared features and capabilities of two customer communication platforms to support the company’s initiative to incorporate AI technologies, including AI agents",
+                "Performed a detailed cost analysis of different platform components and used current expenditures to project potential savings",
+                "Assessed limitations of the current platform in supporting AI-driven workflows and identified key operational inefficiencies affecting overall performance and user experience",
+                "Engaged in technical discussions with platform providers to clarify requirements and integration steps",
+                "Developed and automated the Learning & Development budget request process using JavaScript-based Google Apps Script, implementing event-driven triggers, data validation, and persistent data storage in Google Sheets with automated email notifications",
+                "Automated L&D budget renewals using Google Apps Script, implementing daily triggers to calculate budget allocations based on employee join date, tier, and hours worked, with real-time updates to a centralized spreadsheet tracking all budgets"
             ],
-            skills: ["React", "Node.js", "Python", "AWS", "Docker", "TypeScript"],
-            highlights: [
-                { icon: Users, text: "Team Lead" },
-                { icon: TrendingUp, text: "40% Performance Boost" },
-                { icon: Award, text: "Best Innovation Award" }
-            ]
+            skills: ["JavaScript", "Google Apps Script", "Data Analysis", "Workflow Automation", "Cost Analysis & Financial Forecasting", "Technical Research",  "Process Optimization", "Project Coordination"]
         },
         {
-            title: "Full Stack Developer",
-            company: "Digital Solutions Corp.",
-            location: "New York, NY",
-            period: "March 2020 – December 2021",
-            type: "Full-time",
-            logo: "https://placehold.co/60x60/1E293B/10B981?text=DS",
+            title: "Illicit Trade Prevention Intern",
+            company: "Philip Morris International",
+            location: "Lausanne, Switzerland",
+            period: "June 2024 – July 2024",
+            type: "Internship",
+            logo: "https://companieslogo.com/img/orig/PM-9b5fa1ae.png?t=1720244493",
             achievements: [
-                "Developed and maintained React-based web applications serving 100K+ monthly active users",
-                "Built RESTful APIs using Node.js and Express, improving data retrieval speed by 60%",
-                "Collaborated with UX/UI designers to create responsive, accessible interfaces",
-                "Implemented automated testing suite, reducing production bugs by 45%"
+                "Created and presented debriefing materials for agencies supporting the Illicit Trade Prevention (ITP) team in PMI's Legal & Compliance department",
+                "Managed a project researching 150+ global brands and products, synthesizing findings into a master Excel inventory and two catalogue-style brand boards",
+                "Produced a live data dashboard with charts and visuals for ongoing illicit cigarette consumption analysis",
+                "Proofread and cross-checked final KPMG reports for 38 European markets, ensuring data and calculation accuracy"
             ],
-            skills: ["React", "Node.js", "MongoDB", "Express", "Jest", "Sass"],
-            highlights: [
-                { icon: Users, text: "100K+ Users" },
-                { icon: TrendingUp, text: "60% Speed Improvement" },
-                { icon: Award, text: "Quality Excellence" }
-            ]
+            skills: ["Data Analysis", "Excel (Advanced Functions & Pivot Tables)", "Research & Documentation", "Consultative Problem Solving", "Cross-functional Communication", "Project Management", "PowerPoint Presentation Design", "Analytical Thinking"]
         },
         {
-            title: "Junior Software Engineer",
-            company: "StartupTech",
-            location: "Austin, TX",
-            period: "June 2018 – February 2020",
-            type: "Full-time",
-            logo: "https://placehold.co/60x60/1F2937/F59E0B?text=ST",
+            title: "Market Research Analyst",
+            company: "Odders Lab",
+            location: "Remote",
+            period: "January 2023 – March 2023",
+            type: "Internship",
+            logo: "https://odderslab.com/wp-content/uploads/2023/06/Logotipo-Odders-Color-Fondo-Blanco-1200x1200-1.jpg",
             achievements: [
-                "Contributed to front-end development using React and TypeScript for a fintech application",
-                "Participated in agile development processes and code reviews",
-                "Optimized database queries, reducing load times by 25%",
-                "Developed reusable UI components that improved development efficiency by 30%"
+                "Collaborated in a team of 5 to conduct target market research on virtual reality products aimed at the 35+ demographic",
+                "Researched 10 potential competitors in the virtual reality software industry to identify strengths and weaknesses",
+                "Investigated 5 market barriers and developed innovative strategies to overcome reduced use of virtual reality",
+                "Synthesized all research and strategies into a client presentation and presented it remotely to the Odders Lab team"
             ],
-            skills: ["React", "TypeScript", "PostgreSQL", "Git", "Agile", "CSS3"],
-            highlights: [
-                { icon: TrendingUp, text: "25% Load Time Reduction" },
-                { icon: Award, text: "Rising Star Award" }
-            ]
+            skills: ["Market Research", "Data Analysis", "Competitive Analysis", "Team Collaboration", "Presentation Skills", "Strategic Thinking", "Qualitative & Quantitative Research", "Team Management"]
         }
     ];
 
-    const getYearsOfExperience = () => {
-        const startDate = new Date('2018-06-01');
-        const currentDate = new Date();
-        const years = (currentDate - startDate) / (1000 * 60 * 60 * 24 * 365);
-        return Math.floor(years);
+    // get number of years of experince since start date of my first internship 
+    function getExperienceTime() {
+        const startYear = 2023;
+        const currentYear = new Date().getFullYear();
+        return currentYear - startYear;
     };
 
     return (
         <div className="max-w-6xl mx-auto relative z-10">
-            {/* Section Header */}
+        
+            {/* title for the secion */}
             <div className="text-center mb-16">
                 <h2 className="text-4xl md:text-5xl font-light mb-4 bg-gradient-to-r from-white via-cyan-200 to-blue-200 bg-clip-text text-transparent">
                     <Briefcase className="inline-block mr-3 text-cyan-400" size={40} />
-                    Professional Experience
+                    Experience to Date
                 </h2>
                 <p className="text-lg text-gray-400 max-w-2xl mx-auto leading-relaxed mb-6">
-                    {getYearsOfExperience()}+ years of building scalable applications and leading development teams
+                    {getExperienceTime()}+ years of professional experience
                 </p>
 
-                {/* Experience Summary */}
+                {/* rough experience summary for viewer */}
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-2xl mx-auto">
                     <div className="bg-gray-800/30 backdrop-blur-sm rounded-lg p-4 border border-gray-700/50">
                         <div className="text-2xl font-bold text-cyan-400">3</div>
@@ -122,16 +127,18 @@ function Experience() {
                 </div>
             </div>
 
-            {/* Desktop Experience Layout */}
+            {/* timeline setup for the experince bar */}
             <div className="hidden lg:block">
                 <div className="relative">
-                    {/* Timeline line */}
+                
+                    {/* timeline line */}
                     <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-cyan-400/50 via-blue-400/50 to-indigo-400/50"></div>
 
                     <div className="space-y-16">
                         {experiences.map((exp, index) => (
                             <div
                                 key={index}
+                                ref={element => experienceRefs.current[index] = element}
                                 className={`experience-item relative pl-20 transition-all duration-700 ${visibleItems.includes(index)
                                         ? 'opacity-100 transform translate-x-0'
                                         : 'opacity-0 transform translate-x-10'
@@ -139,14 +146,16 @@ function Experience() {
                                 data-index={index}
                                 style={{ transitionDelay: `${index * 200}ms` }}
                             >
-                                {/* Timeline dot */}
+                                {/* timline bullet points for each experince */}
                                 <div className="absolute left-6 top-6 w-6 h-6 bg-gradient-to-r from-cyan-400 to-blue-400 rounded-full border-4 border-gray-900 z-10 shadow-lg shadow-cyan-400/50"></div>
 
-                                {/* Connector line */}
+                                {/* connecting the dots with a line */}
                                 <div className="absolute left-12 top-9 w-8 h-0.5 bg-gradient-to-r from-cyan-400 to-blue-400"></div>
 
+                                {/* cards for the experinces */}
                                 <div className="group bg-gray-800/50 backdrop-blur-sm rounded-xl border border-gray-700/50 hover:border-cyan-400/30 transition-all duration-300 hover:shadow-lg hover:shadow-cyan-400/10 overflow-hidden">
-                                    {/* Header */}
+
+                                    {/* display company logo and also full official name */}
                                     <div className="p-6 pb-4">
                                         <div className="flex items-start justify-between mb-4">
                                             <div className="flex items-center space-x-4">
@@ -167,6 +176,7 @@ function Experience() {
                                             </span>
                                         </div>
 
+                                        {/* where and the dates for my experience */}
                                         <div className="flex items-center space-x-4 text-sm text-gray-400 mb-4">
                                             <div className="flex items-center">
                                                 <MapPin size={16} className="mr-1" />
@@ -177,19 +187,9 @@ function Experience() {
                                                 {exp.period}
                                             </div>
                                         </div>
-
-                                        {/* Highlights */}
-                                        <div className="flex flex-wrap gap-2 mb-4">
-                                            {exp.highlights.map((highlight, i) => (
-                                                <div key={i} className="flex items-center px-3 py-1 bg-gray-700/50 rounded-full text-xs text-gray-300">
-                                                    <highlight.icon size={12} className="mr-1.5 text-cyan-400" />
-                                                    {highlight.text}
-                                                </div>
-                                            ))}
-                                        </div>
                                     </div>
 
-                                    {/* Content */}
+                                    {/* what I did in the experience */}
                                     <div className="px-6 pb-6">
                                         <ul className="space-y-3 mb-6">
                                             {exp.achievements.map((achievement, i) => (
@@ -202,7 +202,7 @@ function Experience() {
                                             ))}
                                         </ul>
 
-                                        {/* Skills */}
+                                        {/* the skills I gained during the experience */}
                                         <div className="flex flex-wrap gap-2">
                                             {exp.skills.map((skill, i) => (
                                                 <span key={i} className="px-3 py-1 bg-gray-700/50 text-gray-300 text-xs rounded-md border border-gray-600/50 font-medium hover:border-cyan-400/30 transition-colors duration-300">
