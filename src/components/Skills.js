@@ -188,7 +188,7 @@ function Skills() {
     const Icon = currentCategory.icon;
 
     return (
-        <div className="max-w-6xl mx-auto px-4">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-0">
             {/* Section Header */}
             <div className="text-center mb-16">
                 <h2 className="text-3xl md:text-4xl lg:text-5xl font-light mb-4 bg-gradient-to-r from-white via-cyan-200 to-blue-200 bg-clip-text text-transparent">
@@ -221,13 +221,13 @@ function Skills() {
             </div>
 
             {/* Skills Grid */}
-            <div className="bg-gray-800/30 backdrop-blur-sm rounded-xl border border-gray-700/50 p-4 sm:p-8 text-center">
+            <div className="bg-gray-800/30 backdrop-blur-sm rounded-xl border border-gray-700/50 p-4 sm:p-6 md:p-8 text-center">
                 <div className="flex items-center mb-6 sm:mb-8">
                     <Icon className="text-cyan-400 mr-3" size={24} />
                     <h3 className="text-lg md:text-xl lg:text-2xl font-medium text-white">{currentCategory.title}</h3>
                 </div>
 
-                <div className={`grid gap-4 ${activeCategory === 'softSkills' ? 'grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6' : 'grid-cols-1 sm:grid-cols-2 lg:grid-cols-4'}`}>
+                <div className={`grid gap-4 ${activeCategory === 'softSkills' ? 'grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5' : 'grid-cols-1 sm:grid-cols-2 lg:grid-cols-4'}`}>
                     {currentCategory.skills.map((skill, index) => (
                         <div
                             key={skill.name}
@@ -262,8 +262,7 @@ function Skills() {
 
                                 // for all other skill have grid of 4
 
-                                <div className={`group bg-gray-800/50 backdrop-blur-sm rounded-xl border border-gray-700/50 hover:border-cyan-400/30 transition-all duration-300 hover:shadow-lg hover:shadow-cyan-400/10 p-3 md:p-4relative overflow-hidden flex flex-col ${skill.year ? 'h-44 md:h-52' : 'h-36 md:h-40'} max-w-sm mx-auto`}>
-
+                                <div className={`group bg-gray-800/50 backdrop-blur-sm rounded-xl border border-gray-700/50 hover:border-cyan-400/30 transition-all duration-300 hover:shadow-lg hover:shadow-cyan-400/10 px-3 py-4 sm:p-4 relative overflow-hidden flex flex-col ${skill.year ? 'h-48.5' : 'h-40'}`}>
                                     {/* gradient overlay */}
                                     <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/5 via-transparent to-blue-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
 
