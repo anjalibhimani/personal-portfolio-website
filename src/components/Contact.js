@@ -16,7 +16,7 @@ function Contact() {
     const [emailIsValid, setEmailIsValid] = useState(false);
 
     // validate email input using regular expressions (regex)
-    function validateEmail(email){
+    function validateEmail(email) {
         const regex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/;
         if (!regex.test(email)) {
             return { isValid: false, error: 'Please enter a valid email address' };
@@ -24,7 +24,7 @@ function Contact() {
 
         if (email.length > 254) {
             return { isValid: false, error: 'Email address is too long' };
-        } 
+        }
 
         if (email.includes('..')) {
             return { isValid: false, error: 'Email cannot contain consecutive dots' };
@@ -38,7 +38,7 @@ function Contact() {
     };
 
     // check for input changes in the form, with continous email check
-    function handleInputChange(e){
+    function handleInputChange(e) {
         const { name, value } = e.target;
         setContactForm(prev => ({
             ...prev,
@@ -58,7 +58,7 @@ function Contact() {
     };
 
     // function so on submission, fields are validated and POST request is sent
-    async function handleSubmission(e){
+    async function handleSubmission(e) {
         e.preventDefault();
 
         const emailValidation = validateEmail(contactForm.email);
@@ -104,8 +104,8 @@ function Contact() {
         } catch (error) {
             console.error("Error sending message:", error);
             setSubmitStatus('error');
-        
-        // stop loading 
+
+            // stop loading 
         } finally {
             setIsSubmitting(false);
         }
@@ -119,26 +119,26 @@ function Contact() {
     // display the components in the react web app for UI
     return (
         <div className="max-w-6xl mx-auto">
-            
+
             {/* connect section title + description */}
             <div className="text-center mb-16">
                 <h2 className="text-4xl md:text-5xl font-light mb-4 bg-gradient-to-r from-white via-cyan-200 to-blue-200 bg-clip-text text-transparent">
-                    Let's Connect
+                    Let&apos;s Connect
                 </h2>
                 <p className="text-lg text-gray-400 max-w-2xl mx-auto leading-relaxed">
-                    I'm always excited to discuss new opportunities, collaborate on projects, or just have a chat about technology and innovation!
+                    I&apos;m always excited to discuss new opportunities, collaborate on projects, or just have a chat about technology and innovation!
                 </p>
             </div>
 
             <div className="grid lg:grid-cols-2 gap-12">
-        
+
                 {/* contact form setup */}
                 <div className="bg-gray-800/50 backdrop-blur-sm rounded-xl border border-gray-700/50 p-8">
                     <h3 className="text-2xl font-medium text-white mb-6 flex items-center">
                         <Send className="mr-3 text-cyan-400" size={24} />
                         Get in Touch
                     </h3>
-        
+
                     {/* contact form with all the input field boxes and submit button */}
                     <form onSubmit={handleSubmission} className="space-y-6">
 
@@ -203,7 +203,7 @@ function Contact() {
                                 </p>
                             )}
                         </div>
-                            
+
                         {/* message input box for user to type their text */}
                         <div>
                             <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">
@@ -248,7 +248,7 @@ function Contact() {
                         {submitStatus === 'success' && (
                             <div className="text-green-400 text-center text-sm flex items-center justify-center">
                                 <CheckCircle size={16} className="mr-2" />
-                                Message sent successfully! I'll get back to you soon.
+                                Message sent successfully! I&apos;ll get back to you soon.
                             </div>
                         )}
 

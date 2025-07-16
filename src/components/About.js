@@ -67,7 +67,7 @@ function About() {
                             />
                         </span>
                     ) : (
-                        <span className="opacity-0">Hello, I'm Anjali Bhimani</span>
+                        <span className="opacity-0">Hello, I&apos;m Anjali Bhimani</span>
                     )}
                 </h1>
 
@@ -85,7 +85,7 @@ function About() {
             {/* Description */}
             <div className="mb-12 relative z-10">
                 <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8 max-w-4xl mx-auto">
-                    I'm passionate about leveraging technology and tools practical, impactful solutions that improve people's lives. With a focus on modern web technologies, I aim to create reliable, user-focused applications that can make a difference.
+                    I&apos;m passionate about leveraging technology and tools practical, impactful solutions that improve people&apos;s lives. With a focus on modern web technologies, I aim to create reliable, user-focused applications that can make a difference.
                 </p>
             </div >
 
