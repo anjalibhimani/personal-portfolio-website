@@ -13,29 +13,29 @@ function Experience() {
     useEffect(() => {
         const observer = new IntersectionObserver(
             (entries) => {
-                
+
                 //use set to avoid duplicates with mult elements being viewed on a screen
                 setVisibleItems((prev) => {
                     const newItems = new Set(prev);
 
-                // for all observed elements, if visible right now then add that element index to set
+                    // for all observed elements, if visible right now then add that element index to set
                     entries.forEach((entry) => {
                         if (entry.isIntersecting) {
                             newItems.add(parseInt(entry.target.dataset.index));
-                    }
+                        }
+                    });
+
+                    // return the new state with newly viewed elements as ana array again
+                    return [...newItems];
                 });
-                    
-            // return the new state with newly viewed elements as ana array again
-            return [...newItems];
-            });
             },
-            
-            { threshold: 0.1 } );
+
+            { threshold: 0.1 });
 
         // observe all experience elements using refs for monitoring 
         experienceRefs.current = experienceRefs.current.slice(0, experiences.length);
         experienceRefs.current.forEach(item => item && observer.observe(item));
-        
+
         return () => observer.disconnect();
     }, []);
 
@@ -47,7 +47,7 @@ function Experience() {
             location: "Berlin, Germany",
             period: "June 2025 – August 2025",
             type: "Internship",
-            logo: "https://play-lh.googleusercontent.com/5J-pt61y1Lh7lgreFRuZTGAFxQHaG5beUwGVJfQO-mqow6JqVCKn_fqbW_Y23wsLFA=w600-h300-pc0xffffff-pd",
+            logo: "https://media.licdn.com/dms/image/v2/D4E0BAQHLinna1bHVvA/company-logo_200_200/company-logo_200_200/0/1704982116415/formelskin_logo?e=2147483647&v=beta&t=ks9aZfoWcogPtXx1YFrzRj6Ugn205OLdk17So6r8t3c",
             achievements: [
                 "Analyzed and compared features and capabilities of two customer communication platforms to support the company’s initiative to incorporate AI technologies, including AI agents",
                 "Performed a detailed cost analysis of different platform components and used current expenditures to project potential savings",
@@ -56,7 +56,7 @@ function Experience() {
                 "Developed and automated the Learning & Development budget request process using JavaScript-based Google Apps Script, implementing event-driven triggers, data validation, and persistent data storage in Google Sheets with automated email notifications",
                 "Automated L&D budget renewals using Google Apps Script, implementing daily triggers to calculate budget allocations based on employee join date, tier, and hours worked, with real-time updates to a centralized spreadsheet tracking all budgets"
             ],
-            skills: ["JavaScript", "Google Apps Script", "Data Analysis", "Workflow Automation", "Cost Analysis & Financial Forecasting", "Technical Research",  "Process Optimization", "Project Coordination"]
+            skills: ["JavaScript", "Google Apps Script", "Data Analysis", "Workflow Automation", "Cost Analysis & Financial Forecasting", "Technical Research", "Process Optimization", "Project Coordination"]
         },
         {
             title: "Illicit Trade Prevention Intern",
@@ -99,38 +99,22 @@ function Experience() {
 
     return (
         <div className="max-w-6xl mx-auto relative z-10">
-        
+
             {/* title for the secion */}
             <div className="text-center mb-16">
                 <h2 className="text-4xl md:text-5xl font-light mb-4 bg-gradient-to-r from-white via-cyan-200 to-blue-200 bg-clip-text text-transparent">
                     <Briefcase className="inline-block mr-3 text-cyan-400" size={40} />
-                    Experience to Date
+                    Experience
                 </h2>
                 <p className="text-lg text-gray-400 max-w-2xl mx-auto leading-relaxed mb-6">
                     {getExperienceTime()}+ years of professional experience
                 </p>
-
-                {/* rough experience summary for viewer */}
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-2xl mx-auto">
-                    <div className="bg-gray-800/30 backdrop-blur-sm rounded-lg p-4 border border-gray-700/50">
-                        <div className="text-2xl font-bold text-cyan-400">3</div>
-                        <div className="text-sm text-gray-400">Companies</div>
-                    </div>
-                    <div className="bg-gray-800/30 backdrop-blur-sm rounded-lg p-4 border border-gray-700/50">
-                        <div className="text-2xl font-bold text-cyan-400">15+</div>
-                        <div className="text-sm text-gray-400">Projects</div>
-                    </div>
-                    <div className="bg-gray-800/30 backdrop-blur-sm rounded-lg p-4 border border-gray-700/50">
-                        <div className="text-2xl font-bold text-cyan-400">5</div>
-                        <div className="text-sm text-gray-400">Team Members Mentored</div>
-                    </div>
-                </div>
             </div>
 
             {/* timeline setup for the experince bar */}
             <div className="hidden lg:block">
                 <div className="relative">
-                
+
                     {/* timeline line */}
                     <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-cyan-400/50 via-blue-400/50 to-indigo-400/50"></div>
 
@@ -140,8 +124,8 @@ function Experience() {
                                 key={index}
                                 ref={element => experienceRefs.current[index] = element}
                                 className={`experience-item relative pl-20 transition-all duration-700 ${visibleItems.includes(index)
-                                        ? 'opacity-100 transform translate-x-0'
-                                        : 'opacity-0 transform translate-x-10'
+                                    ? 'opacity-100 transform translate-x-0'
+                                    : 'opacity-0 transform translate-x-10'
                                     }`}
                                 data-index={index}
                                 style={{ transitionDelay: `${index * 200}ms` }}
@@ -162,7 +146,7 @@ function Experience() {
                                                 <img
                                                     src={exp.logo}
                                                     alt={`${exp.company} logo`}
-                                                    className="w-12 h-12 rounded-lg border border-gray-600/50"
+                                                    className={`w-24 h-24 rounded-lg border border-gray-600/50 ${exp.company === 'Philip Morris International' ? 'bg-white' : ''}`}
                                                 />
                                                 <div>
                                                     <h3 className="text-xl font-semibold text-white mb-1 group-hover:text-cyan-400 transition-colors duration-300">

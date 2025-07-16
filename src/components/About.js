@@ -85,24 +85,25 @@ function About() {
             {/* Description */}
             <div className="mb-12 relative z-10">
                 <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8 max-w-4xl mx-auto">
-                    <User className="inline-block mr-2 text-cyan-400" size={20} />
-                    I'm passionate about <span className="text-cyan-400 font-medium">leveraging technology and tools</span> to build <span className="text-cyan-400 font-medium"> innovative solutions</span> Practical, impactful solutions </span> that improve people's lives. With a focus on modern web technologies, I am to create </span> to build <span className="text-cyan-400 font-medium">reliable, user-focused applications</span> that can make a difference. 
+                    I'm passionate about leveraging technology and tools practical, impactful solutions that improve people's lives. With a focus on modern web technologies, I aim to create reliable, user-focused applications that can make a difference.
                 </p>
-            </div>
+            </div >
 
             {/* Stats Section */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12 max-w-3xl mx-auto">
-                {stats.map((stat, index) => (
-                    <div key={index} className="bg-gray-800/30 backdrop-blur-sm rounded-xl p-6 border border-gray-700/50 hover:border-cyan-400/30 transition-all duration-300 group">
-                        <stat.icon className="w-8 h-8 text-cyan-400 mx-auto mb-3 group-hover:scale-110 transition-transform duration-300" />
-                        <div className="text-2xl md:text-3xl font-bold text-white mb-1">{stat.value}</div>
-                        <div className="text-sm text-gray-400">{stat.label}</div>
-                    </div>
-                ))}
-            </div>
+            < div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12 max-w-3xl mx-auto" >
+                {
+                    stats.map((stat, index) => (
+                        <div key={index} className="bg-gray-800/30 backdrop-blur-sm rounded-xl p-6 border border-gray-700/50 hover:border-cyan-400/30 transition-all duration-300 group">
+                            <stat.icon className="w-8 h-8 text-cyan-400 mx-auto mb-3 group-hover:scale-110 transition-transform duration-300" />
+                            <div className="text-2xl md:text-3xl font-bold text-white mb-1">{stat.value}</div>
+                            <div className="text-sm text-gray-400">{stat.label}</div>
+                        </div>
+                    ))
+                }
+            </div >
 
             {/* CTA Buttons */}
-            <div className="flex flex-wrap justify-center gap-4 relative z-10">
+            < div className="flex flex-wrap justify-center gap-4 relative z-10" >
                 <a
                     href="www.linkedin.com/in/anjali-bhimani-386028276"
                     target="_blank"
@@ -131,8 +132,8 @@ function About() {
                     <Github size={18} className="mr-2 group-hover:rotate-12 transition-transform duration-300" />
                     View GitHub
                 </a>
-            </div>
-        </div>
+            </div >
+        </div >
     );
 }
 

@@ -6,31 +6,13 @@ function Projects() {
 
     const projects = [
         {
-            title: "AI-Powered Analytics Dashboard",
-            description: "A comprehensive dashboard featuring real-time data visualization, predictive analytics, and machine learning insights for business intelligence.",
-            image: "https://placehold.co/600x400/0F172A/38BDF8?text=AI+Dashboard",
-            technologies: ["React", "TypeScript", "Python", "TensorFlow", "D3.js", "AWS"],
+            title: "Interactive Portfolio Website",
+            description: "A responsive portfolio website built with React, featuring animations, a typewriter effect, and an interactive contact form with a modern UI.",
+            image: "https://placehold.co/600x400/0F172A/38BDF8?text=Portfolio+Website",
+            technologies: ["React", "JavaScript", "Tailwind CSS", "Lucide React", "HTML5", "CSS3"],
             previewLink: "#",
-            githubLink: "#",
-            category: "Full Stack"
-        },
-        {
-            title: "E-Commerce Platform",
-            description: "A full-stack e-commerce solution with payment integration, inventory management, and advanced search capabilities.",
-            image: "https://placehold.co/600x400/1E293B/10B981?text=E-Commerce",
-            technologies: ["Next.js", "Node.js", "MongoDB", "Stripe", "Redis"],
-            previewLink: "#",
-            githubLink: "#",
-            category: "Web App"
-        },
-        {
-            title: "Mobile Banking App",
-            description: "Secure mobile banking application with biometric authentication, real-time transactions, and financial analytics.",
-            image: "https://placehold.co/600x400/1F2937/F59E0B?text=Banking+App",
-            technologies: ["React Native", "Node.js", "PostgreSQL", "JWT", "Plaid API"],
-            previewLink: "#",
-            githubLink: "#",
-            category: "Mobile"
+            githubLink: "https://github.com/anjalibhimani/personal-portfolio-website.git",
+            category: "Frontend"
         }
     ];
 
@@ -39,10 +21,10 @@ function Projects() {
             {/* Section Header */}
             <div className="text-center mb-16">
                 <h2 className="text-4xl md:text-5xl font-light mb-4 bg-gradient-to-r from-white via-cyan-200 to-blue-200 bg-clip-text text-transparent">
-                    Featured Projects
+                    Independent Projects
                 </h2>
-                <p className="text-lg text-gray-400 max-w-2xl mx-auto leading-relaxed">
-                    A showcase of my recent work, demonstrating expertise in modern web technologies and innovative problem-solving
+                <p className="text-lg text-gray-400 max-w-2xl mx-auto leading-relaxed whitespace-nowrap">
+                    Recent projects showcasing my growing skills in web development and creative problem-solving
                 </p>
             </div>
 
@@ -88,16 +70,11 @@ function Projects() {
 
                             {/* Technologies */}
                             <div className="flex flex-wrap gap-2 mb-6">
-                                {project.technologies.slice(0, 4).map((tech, i) => (
+                                {project.technologies.map((tech, i) => (
                                     <span key={i} className="px-2 py-1 bg-gray-700/50 text-gray-300 text-xs rounded-md border border-gray-600/50 font-medium">
                                         {tech}
                                     </span>
                                 ))}
-                                {project.technologies.length > 4 && (
-                                    <span className="px-2 py-1 bg-gray-700/50 text-gray-400 text-xs rounded-md border border-gray-600/50">
-                                        +{project.technologies.length - 4}
-                                    </span>
-                                )}
                             </div>
 
                             {/* Action Buttons */}

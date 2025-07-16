@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Code, Database, Globe, Wrench, Award, Users, Brain, Zap } from 'lucide-react';
 
 function Skills() {
-    const [activeCategory, setActiveCategory] = useState('technical');
+    const [activeCategory, setActiveCategory] = useState('programmingAndDev');
     const [visibleSkills, setVisibleSkills] = useState([]);
 
     useEffect(() => {
@@ -51,6 +51,11 @@ function Skills() {
                     name: "HTML/CSS",
                     description: "Web Fundamentals",
                     logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
+                },
+                {
+                    name: "GitHub",
+                    description: "Version Control & Collaboration",
+                    logo: "https://github.githubassets.com/assets/GitHub-Mark-ea2971cee799.png"
                 }
             ]
         },
@@ -72,12 +77,12 @@ function Skills() {
                 {
                     name: "Communication",
                     description: "Effective communication skills",
-                    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-plain-wordmark.svg"
+                    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/slack/slack-original.svg"
                 },
                 {
                     name: "Leadership",
                     description: "Team leadership and motivation",
-                    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg"
+                    logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Leadership_icon.svg/1200px-Leadership_icon.svg.png"
                 },
                 {
                     name: "Writing",
@@ -91,7 +96,7 @@ function Skills() {
                 },
                 {
                     name: "Critical Thinking",
-                    description: "Objective analysis and evaluation of issues",
+                    description: "Objective analysis to evaluate issues",
                     logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jenkins/jenkins-original.svg"
                 },
                 {
@@ -101,7 +106,7 @@ function Skills() {
                 },
                 {
                     name: "Problem Solving",
-                    description: "Identifying solutions to complex challenges",
+                    description: "Identifying solutions to challenges",
                     logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/terraform/terraform-original.svg"
                 }
             ]
@@ -113,42 +118,42 @@ function Skills() {
                 {
                     name: "Google Documents",
                     description: "Document creation and collaboration",
-                    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg"
+                    logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/Google_Docs_logo_%282014-2020%29.svg/1200px-Google_Docs_logo_%282014-2020%29.svg.png"
                 },
                 {
                     name: "Google Spreadsheets",
                     description: "Spreadsheet management",
-                    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg"
+                    logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Google_Sheets_logo_%282014-2020%29.svg/1200px-Google_Sheets_logo_%282014-2020%29.svg.png"
                 },
                 {
                     name: "Google Slides",
                     description: "Presentation creation",
-                    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg"
+                    logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/Google_Slides_2020_Logo.svg/1200px-Google_Slides_2020_Logo.svg.png"
                 },
                 {
                     name: "Google Forms",
                     description: "Form creation and data collection",
-                    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg"
+                    logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Google_Forms_2020_Logo.svg/1200px-Google_Forms_2020_Logo.svg.png"
                 },
                 {
                     name: "Microsoft PowerPoint",
                     description: "Presentation software",
-                    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/materialui/materialui-original.svg"
+                    logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Microsoft_Office_PowerPoint_%282019%E2%80%93present%29.svg/1200px-Microsoft_Office_PowerPoint_%282019%E2%80%93present%29.svg.png"
                 },
                 {
                     name: "Microsoft Excel",
                     description: "Spreadsheet and data analysis",
-                    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg"
+                    logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Microsoft_Office_Excel_%282019%E2%80%93present%29.svg/1200px-Microsoft_Office_Excel_%282019%E2%80%93present%29.svg.png"
                 },
                 {
                     name: "Microsoft Word",
                     description: "Document processing",
-                    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg"
+                    logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Microsoft_Office_Word_%282019%E2%80%93present%29.svg/1200px-Microsoft_Office_Word_%282019%E2%80%93present%29.svg.png"
                 },
                 {
                     name: "Notion",
                     description: "All-in-one workspace and note-taking",
-                    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg"
+                    logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Notion-logo.svg/1200px-Notion-logo.svg.png"
                 }
             ]
         },
@@ -159,7 +164,7 @@ function Skills() {
                 {
                     name: "VEX Robotics Spin Up",
                     description: "2nd place at 2022 Swiss Qualifications",
-                    logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Circle-icons-lightbulb.svg/1200px-Circle-icons-lightbulb.svg.png",
+                    logo: "https://robotics.nasa.gov/wp-content/uploads/2020/04/vex_robotics_logo.png",
                     year: "2022"
                 },
                 {
@@ -180,6 +185,7 @@ function Skills() {
     ];
 
     const currentCategory = skillCategories[activeCategory];
+    const Icon = currentCategory.icon;
 
     return (
         <div className="max-w-6xl mx-auto">
@@ -187,15 +193,15 @@ function Skills() {
             <div className="text-center mb-16">
                 <h2 className="text-4xl md:text-5xl font-light mb-4 bg-gradient-to-r from-white via-cyan-200 to-blue-200 bg-clip-text text-transparent">
                     <Brain className="inline-block mr-3 text-cyan-400" size={40} />
-                    Skills & Expertise
+                    Skills
                 </h2>
                 <p className="text-lg text-gray-400 max-w-2xl mx-auto leading-relaxed">
-                    A comprehensive overview of my technical abilities, professional skills, and continuous learning journey
+                    An overview of my technical and professional skills
                 </p>
             </div>
 
             {/* Category Tabs */}
-            <div className="flex flex-wrap justify-center gap-2 mb-12">
+            <div className="flex justify-center gap-2 mb-12 overflow-x-auto">
                 {categories.map((category) => (
                     <button
                         key={category.id}
@@ -203,7 +209,7 @@ function Skills() {
                             setActiveCategory(category.id);
                             setVisibleSkills([]);
                         }}
-                        className={`flex items-center px-4 py-2 rounded-lg font-medium transition-all duration-300 ${activeCategory === category.id
+                        className={`flex items-center px-3 py-2 rounded-lg font-medium transition-all duration-300 whitespace-nowrap flex-shrink-0 ${activeCategory === category.id
                             ? 'bg-gradient-to-r from-cyan-600 to-blue-600 text-white shadow-lg shadow-cyan-500/25'
                             : 'bg-gray-800/50 text-gray-300 hover:bg-gray-700/50 hover:text-white border border-gray-700/50'
                             }`}
@@ -217,11 +223,11 @@ function Skills() {
             {/* Skills Grid */}
             <div className="bg-gray-800/30 backdrop-blur-sm rounded-xl border border-gray-700/50 p-8 text-center">
                 <div className="flex items-center mb-8">
-                    <currentCategory.icon className="text-cyan-400 mr-3" size={28} />
+                    <Icon className="text-cyan-400 mr-3" size={28} />
                     <h3 className="text-2xl font-medium text-white">{currentCategory.title}</h3>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                <div className={`grid gap-4 ${activeCategory === 'softSkills' ? 'grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6' : 'grid-cols-1 md:grid-cols-2 lg:grid-cols-4'}`}>
                     {currentCategory.skills.map((skill, index) => (
                         <div
                             key={skill.name}
@@ -232,52 +238,78 @@ function Skills() {
                             data-index={index}
                             style={{ transitionDelay: `${index * 100}ms` }}
                         >
-                            <div className={`group bg-gray-800/50 backdrop-blur-sm rounded-xl border border-gray-700/50 hover:border-cyan-400/30 transition-all duration-300 hover:shadow-lg hover:shadow-cyan-400/10 p-4 relative overflow-hidden flex flex-col ${skill.year ? 'h-48.5' : 'h-40'}`}>
-                                {/* Subtle gradient overlay */}
-                                <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/5 via-transparent to-blue-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                            {/* if category being viewd is soft skills then change grid so no logo and 6 skills per row */}
+                            {activeCategory === 'softSkills' ? (
+                                <div className="group bg-gray-800/50 backdrop-blur-sm rounded-xl border border-gray-700/50 hover:border-cyan-400/30 transition-all duration-300 hover:shadow-lg hover:shadow-cyan-400/10 p-4 relative overflow-hidden flex flex-col h-32">
 
-                                {/* Logo */}
-                                <div className="flex items-center justify-center mb-2 relative z-10">
-                                    <div className="w-16 h-16 bg-gradient-to-br from-gray-700/50 to-gray-600/50 rounded-lg flex items-center justify-center group-hover:from-gray-600/60 group-hover:to-gray-500/60 transition-all duration-300 shadow-lg flex-shrink-0">
-                                        <img
-                                            src={skill.logo}
-                                            alt={skill.name}
-                                            className="w-10 h-10 object-contain group-hover:scale-110 transition-transform duration-300"
-                                            onError={(e) => {
-                                                e.target.style.display = 'none';
-                                                e.target.nextSibling.style.display = 'flex';
-                                            }}
-                                        />
-                                        <div className="w-10 h-10 bg-gradient-to-br from-cyan-400/20 to-blue-400/20 rounded-md hidden items-center justify-center">
-                                            <span className="text-cyan-400 font-bold text-lg">
-                                                {skill.name.charAt(0)}
-                                            </span>
+                                    {/* gradient overlay */}
+                                    <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/5 via-transparent to-blue-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+
+                                    {/* the skill content */}
+                                    <div className="relative z-10 flex-grow flex flex-col justify-center text-center">
+                                        <h4 className="text-white font-semibold text-lg mb-2 transition-colors duration-300 leading-tight">
+                                            {skill.name}
+                                        </h4>
+                                        <p className="text-gray-400 text-sm leading-relaxed transition-colors duration-300">
+                                            {skill.description}
+                                        </p>
+                                    </div>
+
+                                    {/* Subtle accent line */}
+                                    <div className="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-cyan-400/0 via-cyan-400/20 to-cyan-400/0 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></div>
+                                </div>
+                            ) : (
+
+                                // for all other skill have grid of 4
+
+                                <div className={`group bg-gray-800/50 backdrop-blur-sm rounded-xl border border-gray-700/50 hover:border-cyan-400/30 transition-all duration-300 hover:shadow-lg hover:shadow-cyan-400/10 p-4 relative overflow-hidden flex flex-col ${skill.year ? 'h-50' : 'h-40'}`}>
+
+                                    {/* gradient overlay */}
+                                    <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/5 via-transparent to-blue-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+
+                                    {/* logo for the skills icons */}
+                                    <div className="flex items-center justify-center mb-2 relative z-10">
+                                        <div className="w-16 h-16 bg-gradient-to-br from-gray-700/50 to-gray-600/50 rounded-lg flex items-center justify-center group-hover:from-gray-600/60 group-hover:to-gray-500/60 transition-all duration-300 shadow-lg flex-shrink-0">
+                                            <img
+                                                src={skill.logo}
+                                                alt={skill.name}
+                                                className="w-12 h-12 object-contain group-hover:scale-110 transition-transform duration-300"
+                                                onError={(e) => {
+                                                    e.target.style.display = 'none';
+                                                    e.target.nextSibling.style.display = 'flex';
+                                                }}
+                                            />
+                                            <div className="w-10 h-10 bg-gradient-to-br from-cyan-400/20 to-blue-400/20 rounded-md hidden items-center justify-center">
+                                                <span className="text-cyan-400 font-bold text-lg">
+                                                    {skill.name.charAt(0)}
+                                                </span>
+                                            </div>
                                         </div>
                                     </div>
+
+                                    {/* the actual text for the skills*/}
+                                    <div className="relative z-10 flex-grow flex flex-col">
+                                        <h4 className="text-white font-semibold text-base mb-1 transition-colors duration-300 leading-tight">
+                                            {skill.name}
+                                        </h4>
+                                        <p className="text-gray-400 text-sm leading-relaxed transition-colors duration-300 mb-3">
+                                            {skill.description}
+                                        </p>
+
+                                        {/* year for certification if exists */}
+                                        {skill.year && (
+                                            <div className="mt-auto mb-3">
+                                                <span className="text-xs text-cyan-400 bg-gradient-to-r from-cyan-400/10 to-blue-400/10 px-2 py-1 rounded-full border border-cyan-400/20 font-medium">
+                                                    Certified {skill.year}
+                                                </span>
+                                            </div>
+                                        )}
+                                    </div>
+
+                                    {/* Subtle accent line */}
+                                    <div className="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-cyan-400/0 via-cyan-400/20 to-cyan-400/0 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></div>
                                 </div>
-
-                                {/* Content */}
-                                <div className="relative z-10 flex-grow flex flex-col">
-                                    <h4 className="text-white font-semibold text-base mb-1 transition-colors duration-300 leading-tight">
-                                        {skill.name}
-                                    </h4>
-                                    <p className="text-gray-400 text-sm leading-relaxed transition-colors duration-300 mb-3">
-                                        {skill.description}
-                                    </p>
-
-                                    {/* Year display for certifications */}
-                                    {skill.year && (
-                                        <div className="mt-auto mb-3">
-                                            <span className="text-xs text-cyan-400 bg-gradient-to-r from-cyan-400/10 to-blue-400/10 px-2 py-1 rounded-full border border-cyan-400/20 font-medium">
-                                                Certified {skill.year}
-                                            </span>
-                                        </div>
-                                    )}
-                                </div>
-
-                                {/* Subtle accent line */}
-                                <div className="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-cyan-400/0 via-cyan-400/20 to-cyan-400/0 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></div>
-                            </div>
+                            )}
                         </div>
                     ))}
                 </div>
