@@ -98,7 +98,7 @@ function Experience() {
     };
 
     return (
-        <div className="w-full max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="max-w-6xl mx-auto relative z-10 px-4 md:px-6">
 
             {/* title for the secion */}
             <div className="text-center mb-16">
@@ -112,11 +112,11 @@ function Experience() {
             </div>
 
             {/* timeline setup for the experince bar */}
-            <div className="hidden lg:block">
+            <div>
                 <div className="relative">
 
                     {/* timeline line */}
-                    <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-cyan-400/50 via-blue-400/50 to-indigo-400/50"></div>
+                    <div className="absolute left-2.5 md:left-6 top-0 bottom-0 w-0.5 bg-gradient-to-b from-cyan-400/50 via-blue-400/50 to-indigo-400/50"></div>
 
                     <div className="space-y-16">
                         {experiences.map((exp, index) => (
@@ -131,18 +131,18 @@ function Experience() {
                                 style={{ transitionDelay: `${index * 200}ms` }}
                             >
                                 {/* timline bullet points for each experince */}
-                                <div className="absolute left-6 top-6 w-6 h-6 bg-gradient-to-r from-cyan-400 to-blue-400 rounded-full border-4 border-gray-900 z-10 shadow-lg shadow-cyan-400/50"></div>
+                                <div className="absolute left-2.5 md:left-6 top-6 w-6 h-6 bg-gradient-to-r from-cyan-400 to-blue-400 rounded-full border-4 border-gray-900 z-10 shadow-lg shadow-cyan-400/50"></div>
 
                                 {/* connecting the dots with a line */}
-                                <div className="absolute left-12 top-9 w-8 h-0.5 bg-gradient-to-r from-cyan-400 to-blue-400"></div>
+                                <div className="absolute left-9 md:left-12 top-9 w-8 h-0.5 bg-gradient-to-r from-cyan-400 to-blue-400"></div>
 
                                 {/* cards for the experinces */}
                                 <div className="group bg-gray-800/50 backdrop-blur-sm rounded-xl border border-gray-700/50 hover:border-cyan-400/30 transition-all duration-300 hover:shadow-lg hover:shadow-cyan-400/10 overflow-hidden">
 
                                     {/* display company logo and also full official name */}
                                     <div className="p-6 pb-4">
-                                        <div className="flex items-start justify-between mb-4">
-                                            <div className="flex items-center space-x-4">
+                                        <div className="flex flex-col md:flex-row items-start md:items-center justify-between mb-4">
+                                            <div className="flex items-center space-x-4 mb-4 md:mb-0">
                                                 <img
                                                     src={exp.logo}
                                                     alt={`${exp.company} logo`}
@@ -155,7 +155,7 @@ function Experience() {
                                                     <p className="text-cyan-400 font-medium text-lg">{exp.company}</p>
                                                 </div>
                                             </div>
-                                            <span className="px-3 py-1 bg-cyan-400/10 text-cyan-400 text-sm rounded-full border border-cyan-400/20 font-medium">
+                                            <span className="px-3 py-1 bg-cyan-400/10 text-cyan-400 text-sm rounded-full border border-cyan-400/20 font-medium self-end md:self-auto">
                                                 {exp.type}
                                             </span>
                                         </div>
