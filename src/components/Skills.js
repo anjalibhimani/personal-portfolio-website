@@ -201,7 +201,7 @@ function Skills() {
             </div>
 
             {/* Category Tabs */}
-            <div className="flex justify-center gap-2 mb-12 overflow-x-auto">
+            <div className="flex justify-center gap-2 mb-12 px-4">
                 {categories.map((category) => (
                     <button
                         key={category.id}
@@ -209,7 +209,7 @@ function Skills() {
                             setActiveCategory(category.id);
                             setVisibleSkills([]);
                         }}
-                        className={`flex items-center px-3 py-2 rounded-lg font-medium transition-all duration-300 whitespace-nowrap flex-shrink-0 ${activeCategory === category.id
+                        className={`flex items-center px-3 py-2 rounded-lg font-medium transition-all duration-300 text-sm ${activeCategory === category.id
                             ? 'bg-gradient-to-r from-cyan-600 to-blue-600 text-white shadow-lg shadow-cyan-500/25'
                             : 'bg-gray-800/50 text-gray-300 hover:bg-gray-700/50 hover:text-white border border-gray-700/50'
                             }`}
@@ -221,13 +221,13 @@ function Skills() {
             </div>
 
             {/* Skills Grid */}
-            <div className="bg-gray-800/30 backdrop-blur-sm rounded-xl border border-gray-700/50 p-8 text-center">
-                <div className="flex items-center mb-8">
+            <div className="bg-gray-800/30 backdrop-blur-sm rounded-xl border border-gray-700/50 p-4 sm:p-8 text-center">
+                <div className="flex items-center mb-6 sm:mb-8">
                     <Icon className="text-cyan-400 mr-3" size={28} />
-                    <h3 className="text-2xl font-medium text-white">{currentCategory.title}</h3>
+                    <h3 className="text-xl sm:text-2xl font-medium text-white">{currentCategory.title}</h3>
                 </div>
 
-                <div className={`grid gap-4 ${activeCategory === 'softSkills' ? 'grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6' : 'grid-cols-1 md:grid-cols-2 lg:grid-cols-4'}`}>
+                <div className={`grid gap-4 ${activeCategory === 'softSkills' ? 'grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6' : 'grid-cols-1 sm:grid-cols-2 lg:grid-cols-4'}`}>
                     {currentCategory.skills.map((skill, index) => (
                         <div
                             key={skill.name}
