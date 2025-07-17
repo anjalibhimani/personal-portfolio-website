@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState } from 'react'; 
 import { ExternalLink, Github, Folder } from 'lucide-react';
 
 function Projects() {
