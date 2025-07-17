@@ -18,7 +18,7 @@ function TypeWriter({
 
     // typing effect for everytime the index changes to type next letter
     useEffect(() => {
-        // typed everythign then mark done
+        // typed everything then mark done
         if (currentIndex >= text.length) {
             if (!isComplete) {
                 setIsComplete(true);
