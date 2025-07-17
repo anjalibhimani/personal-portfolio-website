@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ExternalLink, Github } from 'lucide-react';
+import { ExternalLink, Github, Folder } from 'lucide-react';
 
 function Projects() {
     const [hoveredProject, setHoveredProject] = useState(null);
@@ -21,7 +21,8 @@ function Projects() {
         <div className="max-w-7xl mx-auto px-4 md:px-6">
             {/* Section Header */}
             <div className="text-center mb-16">
-                <h2 className="text-3xl md:text-4xl lg:text-5xl font-light mb-4 bg-gradient-to-r from-white via-cyan-200 to-blue-200 bg-clip-text text-transparent">
+                <h2 className="text-3xl md:text-4xl lg:text-5xl font-light mb-4 text-cyan-400">
+                    <Folder className="inline-block mr-3 text-cyan-400" size={40} />
                     Independent Projects
                 </h2>
                 <p className="text-base md:text-lg text-gray-400 max-w-2xl mx-auto leading-relaxed px-2">
