@@ -163,7 +163,7 @@ function Skills() {
             skills: [
                 {
                     name: "VEX Robotics Spin Up",
-                    description: "Finished in 2nd place at the 2022 Swiss Qualifications",
+                    description: "Earned 2nd place in the 2022 VEX Spin Up Swiss Qualifications as Founder of the club",
                     logo: "https://robotics.nasa.gov/wp-content/uploads/2020/04/vex_robotics_logo.png",
                     year: "2022"
                 },
