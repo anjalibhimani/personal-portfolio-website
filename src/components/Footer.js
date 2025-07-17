@@ -1,6 +1,6 @@
 import React from 'react';
 
-// Footer Component: Copyright and general site information
+// copyright and rights reserved in footer
 function Footer() {
     return (
         <footer className="bg-gray-900/50 backdrop-blur-sm border-t border-gray-800 py-8 mt-20">
