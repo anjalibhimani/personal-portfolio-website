@@ -4,7 +4,7 @@ import { ExternalLink, Github, Folder } from 'lucide-react';
 function Projects() {
     // state to track if user is hovering over a project for animation 
     const [hoveredProject, setHoveredProject] = useState(null);
-
+ 
     // array of personal project data 
     const projects = [
         {
