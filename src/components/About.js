@@ -71,7 +71,7 @@ function About() {
                     )}
                 </h1>
 
-                <div className="text-xl md:text-2xl text-cyan-400 font-medium h-12 flex items-center justify-center">
+                <div className="text-xl md:text-2xl text-cyan-200 font-medium h-12 flex items-center justify-center">
                     {showTypewriter ? (
                         <span className="transition-all duration-500">
                             {roles[currentRoleIndex]}
