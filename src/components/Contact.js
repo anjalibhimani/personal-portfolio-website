@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Mail, Linkedin, Calendar, Send, User, AlertCircle, CheckCircle } from 'lucide-react';
+import { Mail, Linkedin, Calendar, Send, User, AlertCircle, CheckCircle, Mail } from 'lucide-react';
 
 function Contact() {
     // state to store the submission fields from the user
@@ -122,7 +122,8 @@ function Contact() {
 
             {/* connect section title + description */}
             <div className="text-center mb-16">
-                <h2 className="text-4xl md:text-5xl font-light mb-4 bg-gradient-to-r from-white via-cyan-200 to-blue-200 bg-clip-text text-transparent">
+                <h2 className="text-4xl md:text-5xl font-light mb-4 text-cyan-400">
+                    <Mail className="inline-block mr-3 text-cyan-400" size={40} />
                     Let&apos;s Connect
                 </h2>
                 <p className="text-lg text-gray-400 max-w-2xl mx-auto leading-relaxed">
