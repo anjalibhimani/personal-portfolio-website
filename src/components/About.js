@@ -5,7 +5,7 @@ import TypeWriter from './TypeWriter.js';
 function About() {
     const [profilePicSrc, setProfilePicSrc] = useState('/portoflio-picture.jpeg');
     const [showTypewriter, setShowTypewriter] = useState(false);
-    const [currentRoleIndex, setCurrentRoleIndex] = useState(0);
+    const [currentRoleIndex, setCurrentRoleIndex] = useState(0); 
     const fallbackSrc = 'https://placehold.co/400x400/0F172A/38BDF8?text=AB';
 
     const roles = [
