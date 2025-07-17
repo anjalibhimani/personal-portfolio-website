@@ -1,37 +1,37 @@
-import React, { useState } from 'react'; 
+import React, { useState } from 'react';
 import { ExternalLink, Github, Folder } from 'lucide-react';
 
 function Projects() {
     // state to track if user is hovering over a project for animation 
     const [hoveredProject, setHoveredProject] = useState(null);
- 
+
     // array of personal project data 
     const projects = [
         {
             title: "Interactive Portfolio Website",
             description: "A responsive portfolio website built with React, featuring animations, a typewriter effect, and an interactive contact form with a modern UI.",
-            image: "/portfolio-screenshot.jpeg",
+            image: "/portfolio-website-image.png",
             technologies: ["React", "JavaScript", "Tailwind CSS", "Lucide React", "HTML5", "CSS3", "Git"],
             previewLink: "https://anjali-bhimani.com/",
             githubLink: "https://github.com/anjalibhimani/personal-portfolio-website.git",
-            category: "Frontend", 
-            year: "2025" 
+            category: "Frontend",
+            year: "2025"
         },
         {
             title: "ResNet-18 Garbage Classifier",
             description: "Developed and deployed a ResNet-18 deep learning model on NVIDIA Jetson to classify 12 types of garbage for enhanced recycling efforts.",
-            image: "nvidia-project-image.jpeg",
+            image: "/nvidia-project-image.png",
             technologies: ["PyTorch", "ResNet-18", "ONNX", "Python", "Deep Learning", "NVIDIA Jetson", "jetson-inference"],
             previewLink: "https://www.youtube.com/watch?v=Z7oWlMCnnb0",
             githubLink: "https://github.com/anjalibhimani/final-project-repo.git",
-            category: "Machine Learning / Computer Vision", 
+            category: "Machine Learning / Computer Vision",
             year: "2022"
         }
     ];
 
     return (
         <div className="max-w-7xl mx-auto px-4 md:px-6">
-        
+
             {/* title and description for the page */}
             <div className="text-center mb-16">
                 <h2 className="text-3xl md:text-4xl lg:text-5xl font-light mb-4 text-cyan-200">
@@ -68,7 +68,7 @@ function Projects() {
                                 </span>
                                 {project.year && (
                                     <span className="px-2 py-1 sm:px-3 sm:py-1 bg-white/10 text-gray-100 text-xs sm:text-sm rounded-full border border-white/20 backdrop-blur-sm font-medium ml-2">
-                                {project.year}
+                                        {project.year}
                                     </span>
                                 )}
                             </div>
@@ -90,14 +90,14 @@ function Projects() {
 
                             {/* little tech badges fot the list provided */}
                             <div className="flex flex-wrap gap-1 sm:gap-2 mb-4 sm:mb-6">
-                            {project.technologies.map((tech, i) => (
-                                <span
-                                key={i}
-                                className="px-2 py-1 bg-gray-700/50 text-gray-300 text-xs rounded-md border border-gray-600/50 font-medium"
+                                {project.technologies.map((tech, i) => (
+                                    <span
+                                        key={i}
+                                        className="px-2 py-1 bg-gray-700/50 text-gray-300 text-xs rounded-md border border-gray-600/50 font-medium"
                                     >
-                                {tech}
-                                    </span> ))}
-                             </div>
+                                        {tech}
+                                    </span>))}
+                            </div>
 
                             {/* buttons fot the preview and for github too */}
                             <div className="flex flex-col sm:flex-row gap-2 sm:gap-3">
