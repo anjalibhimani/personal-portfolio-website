@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect} from 'react';
 import { User, Linkedin, Github, Download, Code, Coffee, Sparkles } from 'lucide-react';
 import TypeWriter from './TypeWriter.js';
 
