@@ -1,7 +1,7 @@
 'use client';
 import React, { useState, useEffect, useRef } from 'react';
 import { Briefcase, Calendar, MapPin } from 'lucide-react';
-
+ 
 function Experience() {
 
     // state to know which experince is being viewed by the user
