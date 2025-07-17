@@ -2,28 +2,37 @@ import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 
 function Header() {
+
+    // to check if user scrolled past certain threshhold
     const [scrolled, setScrolled] = useState(false);
+
+    // to track which section is being viewed
     const [activeSection, setActiveSection] = useState('about');
+
+    // if header can be seen or not (for the disappearing effect)
     const [headerVisible, setHeaderVisible] = useState(true);
-    const [lastScrollY, setLastScrollY] = useState(0);
+
+    // track scrolling direction for bar animation and if its on a mobile 
+    const lastScrollY = useRef(0);
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
+    // to adjust view of bar
     useEffect(() => {
         const handleScroll = () => {
             const currentScrollY = window.scrollY;
 
             setScrolled(currentScrollY > 50);
 
-            // Hide/show header based on scroll direction
-            if (currentScrollY > lastScrollY && currentScrollY > 100) {
+            // if scroll down and more than 100px then header disappears 
+            if (currentScrollY > lastScrollY.current && currentScrollY > 100) {
                 setHeaderVisible(false);
             } else {
                 setHeaderVisible(true);
             }
 
-            setLastScrollY(currentScrollY);
+            lastScrollY.current = currentScrollY;
 
-            // Update active section
+            // update the section based on what is being viewed right now
             const sections = ['about', 'skills', 'experience', 'projects', 'contact'];
             const currentSection = sections.find(section => {
                 const element = document.getElementById(section);
@@ -36,10 +45,12 @@ function Header() {
             if (currentSection) setActiveSection(currentSection);
         };
 
+        // keeping track of when user scrolls
         window.addEventListener('scroll', handleScroll);
         return () => window.removeEventListener('scroll', handleScroll);
-    }, [lastScrollY]);
+    }, []);
 
+    // to aid navigation so based on button cliked, scrolls smoothly to that section
     const scrollToSection = (sectionId) => {
         const element = document.getElementById(sectionId);
         if (element) {
@@ -64,19 +75,20 @@ function Header() {
             }`}>
             <nav className="container mx-auto px-6 py-4">
                 <div className="flex justify-between items-center">
-                    {/* Logo */}
+                    {/* top left text */}
                     <button
                         onClick={() => scrollToSection('about')}
                         className="text-lg md:text-2xl font-sans text-white hover:text-cyan-400 transition-colors duration-300 group"
                     >
+                        {/* full name at top */}
                         <span className="hidden sm:inline">Anjali Bhimani</span>
-                        <span className="sm:hidden">AB</span>
                     </button>
 
-                    {/* Desktop Navigation */}
+                    {/* for navigating when on desktop */}
                     <ul className="hidden md:flex space-x-1">
                         {navItems.map((item) => (
                             <li key={item.id}>
+                                {/* underline the section which is clicked on */}
                                 <button
                                     onClick={() => scrollToSection(item.id)}
                                     className={`relative font-medium transition-all duration-300 px-4 py-2 rounded-lg ${activeSection === item.id
@@ -92,7 +104,7 @@ function Header() {
                         ))}
                     </ul>
 
-                    {/* Mobile Menu Button */}
+                    {/* for mobiles just have the side toggle button because smaller screen */}
                     <button
                         onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
                         className="md:hidden p-2 text-gray-300 hover:text-white transition-colors duration-300"
@@ -101,7 +113,7 @@ function Header() {
                     </button>
                 </div>
 
-                {/* Mobile Navigation */}
+                {/* mobile navigation with dropdown section */}
                 <div className={`md:hidden transition-all duration-300 ease-in-out ${mobileMenuOpen
                         ? 'max-h-80 opacity-100 mt-4'
                         : 'max-h-0 opacity-0 overflow-hidden'
