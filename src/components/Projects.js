@@ -15,7 +15,7 @@ function Projects() {
             previewLink: "https://anjali-bhimani.com/",
             githubLink: "https://github.com/anjalibhimani/personal-portfolio-website.git",
             category: "Frontend", 
-            year: "2025"
+            year: "2025" 
         },
         {
             title: "ResNet-18 Garbage Classifier",
