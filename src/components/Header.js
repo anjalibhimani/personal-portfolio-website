@@ -81,7 +81,7 @@ function Header() {
                         className="text-lg md:text-2xl font-sans text-white hover:text-cyan-400 transition-colors duration-300 group"
                     >
                         {/* full name at top */}
-                        <span className="hidden sm:inline">Anjali Bhimani</span>
+                        <span className=>Anjali Bhimani</span>
                     </button>
 
                     {/* for navigating when on desktop */}
