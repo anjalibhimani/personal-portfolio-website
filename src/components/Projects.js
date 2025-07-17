@@ -10,7 +10,7 @@ function Projects() {
         {
             title: "Interactive Portfolio Website",
             description: "A responsive portfolio website built with React, featuring animations, a typewriter effect, and an interactive contact form with a modern UI.",
-            image: "/portfolio-project-image.jpeg";
+            image: "/portfolio-project-image.jpeg",
             technologies: ["React", "JavaScript", "Tailwind CSS", "Lucide React", "HTML5", "CSS3", "Git"],
             previewLink: "https://anjali-bhimani.com/",
             githubLink: "https://github.com/anjalibhimani/personal-portfolio-website.git",
