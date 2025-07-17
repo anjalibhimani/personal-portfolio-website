@@ -5,7 +5,7 @@ function Skills() {
     const [activeCategory, setActiveCategory] = useState('programmingAndDev');
     const [visibleSkills, setVisibleSkills] = useState([]);
 
-    useEffect(() => {
+    useEffect(() => { 
         const observer = new IntersectionObserver(
             (entries) => {
                 entries.forEach((entry) => {
