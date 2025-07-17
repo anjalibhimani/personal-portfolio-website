@@ -186,8 +186,8 @@ function Skills() {
         <div className="max-w-6xl mx-auto px-3 sm:px-6 lg:px-8 overflow-x-hidden">
             {/* Section Header */}
             <div className="text-center mb-16">
-                <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-light mb-3 sm:mb-4 text-cyan-400">
-                    <Brain className="inline-block mr-2 text-cyan-400" size={40} />
+                <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-light mb-3 sm:mb-4 text-cyan-200">
+                    <Brain className="inline-block mr-2 text-cyan-200" size={40} />
                     Skills
                 </h2>
                 <p className="text-sm sm:text-base md:text-lg text-gray-400 max-w-2xl mx-auto leading-relaxed px-2">
