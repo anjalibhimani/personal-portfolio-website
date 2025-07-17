@@ -163,8 +163,14 @@ function Skills() {
             skills: [
                 {
                     name: "VEX Robotics Spin Up",
-                    description: "2nd place at 2022 Swiss Qualifications",
+                    description: "Finished in 2nd place at the 2022 Swiss Qualifications",
                     logo: "https://robotics.nasa.gov/wp-content/uploads/2020/04/vex_robotics_logo.png",
+                    year: "2022"
+                },
+                {
+                    name: "Jetson AI Specialist",
+                    description: "Awarded for outstanding competence and understanding of Artificial Intelligence and Machine Learning",
+                    logo: "https://yt3.googleusercontent.com/btm1_PK-7VRUr9GY2D0UV_2XfbUZPBjghyptjSO1crsfN86HyTYDWPmUbq7JxC3H0Lxe_s067nA=s900-c-k-c0x00ffffff-no-rj",
                     year: "2022"
                 }
             ]
@@ -295,7 +301,7 @@ function Skills() {
                                         {skill.year && (
                                             <div className="mt-3 pt-2">
                                                 <span className="text-xs text-cyan-400 bg-gradient-to-r from-cyan-400/10 to-blue-400/10 px-2 py-1 rounded-full border border-cyan-400/20 font-medium">
-                                                    Certified {skill.year}
+                                                    Issued {skill.year}
                                                 </span>
                                             </div>
                                         )}
