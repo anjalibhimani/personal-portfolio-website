@@ -1,37 +1,26 @@
 import React, { useState, useEffect } from 'react';
 
-// Enhanced TypeWriter Component with better performance and features
+// typewriter settings to customize text, delax between letters, cursor display, etc
 function TypeWriter({
     text,
     delay = 100,
     className = "",
     onComplete,
     pauseDuration = 1000,
-    showCursor = true,
-    cursorChar = "|",
-    startDelay = 0
+    showCursor = false,
+    cursorChar = "|"
 }) {
+    
+    // store initial dispaly of text, next letter to type, if done with text
     const [displayText, setDisplayText] = useState("");
     const [currentIndex, setCurrentIndex] = useState(0);
     const [isComplete, setIsComplete] = useState(false);
-    const [isStarted, setIsStarted] = useState(false);
 
-    // Initialize with start delay
+    // typing effect for everytime the index changes to type next letter
     useEffect(() => {
-        if (startDelay > 0) {
-            const startTimer = setTimeout(() => {
-                setIsStarted(true);
-            }, startDelay);
-            return () => clearTimeout(startTimer);
-        } else {
-            setIsStarted(true);
-        }
-    }, [startDelay]);
-
-    // Main typing effect
-    useEffect(() => {
-        if (!isStarted || currentIndex >= text.length) {
-            if (isStarted && currentIndex >= text.length && !isComplete) {
+        // typed everythign then mark done
+        if (currentIndex >= text.length) {
+            if (!isComplete) {
                 setIsComplete(true);
                 if (onComplete) {
                     setTimeout(onComplete, pauseDuration);
@@ -39,17 +28,20 @@ function TypeWriter({
             }
             return;
         }
-
+        
         const timer = setTimeout(() => {
+            // add next char and update previous
             setDisplayText(prev => prev + text[currentIndex]);
             setCurrentIndex(prev => prev + 1);
         }, delay);
-
+        
         return () => clearTimeout(timer);
-    }, [currentIndex, text, delay, isStarted, isComplete, onComplete, pauseDuration]);
+    }, [currentIndex, text, delay, isComplete, onComplete, pauseDuration]);
 
     return (
         <span className={`inline-block ${className}`}>
+            
+            {/* show text and cursor to viewer */}
             {displayText}
             {showCursor && (
                 <span
