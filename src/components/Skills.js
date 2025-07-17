@@ -187,7 +187,7 @@ function Skills() {
             {/* Section Header */}
             <div className="text-center mb-8 sm:mb-12 md:mb-16">
                 <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-light mb-3 sm:mb-4 bg-gradient-to-r from-white via-cyan-200 to-blue-200 bg-clip-text text-transparent">
-                    <Brain className="inline-block mr-2 text-cyan-400" size={32} />
+                    <Brain className="inline-block mr-2 text-cyan-400" size={40} />
                     Skills
                 </h2>
                 <p className="text-sm sm:text-base md:text-lg text-gray-400 max-w-2xl mx-auto leading-relaxed px-2">
