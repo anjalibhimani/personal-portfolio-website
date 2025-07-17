@@ -68,16 +68,16 @@ function Projects() {
                         </div>
 
                         {/* formatting the image for the project*/}
-                        <div className="relative h-48 sm:h-52 md:h-48 overflow-hidden">
+                        <div className="relative sm:h-60 md:h-56 overflow-hidden mx-3 sm:mx-4 rounded-lg">
                             <img
                                 src={project.image}
                                 alt={project.title}
-                                className="w-full h-full object-contain object-center transform group-hover:scale-105 transition-transform duration-500"
+                                className="w-full h-full object-contain object-center rounded-lg transform group-hover:scale-105 transition-transform duration-500"
                             />
-                            <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/40 to-transparent opacity-80"></div>
+                            <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/40 to-transparent opacity-80 rounded-lg"></div>
 
                             {/* gradient effect when a user hovers over a project grid */}
-                            <div className={`absolute inset-0 bg-gradient-to-r from-cyan-400/20 to-blue-500/20 transition-opacity duration-300 ${hoveredProject === index ? 'opacity-100' : 'opacity-0'
+                            <div className={`absolute inset-0 bg-gradient-to-r from-cyan-400/20 to-blue-500/20 transition-opacity duration-300 rounded-lg ${hoveredProject === index ? 'opacity-100' : 'opacity-0'
                                 }`}></div>
                         </div>
 
