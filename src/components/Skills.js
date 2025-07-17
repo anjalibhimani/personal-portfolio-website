@@ -245,7 +245,7 @@ function Skills() {
                                     <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/5 via-transparent to-blue-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
 
                                     {/* Skill content */}
-                                    <div className="relative z-10 flex-grow flex flex-col justify-center text-center">
+                                    <div className="relative z-10 flex-grow flex flex-col justify-center text-center min-w-0">
                                         <h4 className="text-white font-semibold text-sm sm:text-base lg:text-lg mb-2 transition-colors duration-300 leading-tight">
                                             {skill.name}
                                         </h4>
@@ -283,7 +283,7 @@ function Skills() {
                                     </div>
 
                                     {/* Skill text */}
-                                    <div className="relative z-10 flex-grow flex flex-col text-center">
+                                    <div className="relative z-10 flex-grow flex flex-col text-center min-w-0">
                                         <h4 className="text-white font-semibold text-sm sm:text-base mb-2 transition-colors duration-300 leading-tight">
                                             {skill.name}
                                         </h4>
