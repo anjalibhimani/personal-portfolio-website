@@ -52,17 +52,10 @@ function Projects() {
                         onMouseEnter={() => setHoveredProject(index)}
                         onMouseLeave={() => setHoveredProject(null)}
                     >
-                        {/* formatting the image for the project*/}
-                        <div className="relative h-48 sm:h-52 md:h-48 overflow-hidden">
-                            <img
-                                src={project.image}
-                                alt={project.title}
-                                className="w-full h-full object-center transform group-hover:scale-105 transition-transform duration-500"
-                            />
-                            <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/40 to-transparent opacity-80"></div>
 
-                            {/* badges for the cert year and the category/type of project */}
-                            <div className="absolute top-3 left-3 sm:top-4 sm:left-4 z-10">
+                        {/* badges for the cert year and the category/type of project */}
+                        <div className="relative p-3 sm:p-4 pb-0">
+                            <div className="flex items-center">
                                 <span className="px-2 py-1 sm:px-3 sm:py-1 bg-cyan-400/10 text-cyan-400 text-xs sm:text-sm rounded-full border border-cyan-400/20 backdrop-blur-sm font-medium">
                                     {project.category}
                                 </span>
@@ -72,6 +65,16 @@ function Projects() {
                                     </span>
                                 )}
                             </div>
+                        </div>
+
+                        {/* formatting the image for the project*/}
+                        <div className="relative h-48 sm:h-52 md:h-48 overflow-hidden">
+                            <img
+                                src={project.image}
+                                alt={project.title}
+                                className="w-full h-full object-contain object-center transform group-hover:scale-105 transition-transform duration-500"
+                            />
+                            <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/40 to-transparent opacity-80"></div>
 
                             {/* gradient effect when a user hovers over a project grid */}
                             <div className={`absolute inset-0 bg-gradient-to-r from-cyan-400/20 to-blue-500/20 transition-opacity duration-300 ${hoveredProject === index ? 'opacity-100' : 'opacity-0'
