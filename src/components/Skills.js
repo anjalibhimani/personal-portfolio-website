@@ -183,7 +183,7 @@ function Skills() {
     const Icon = currentCategory.icon;
 
     return (
-        <div className="max-w-6xl mx-auto px-3 sm:px-6 lg:px-8">
+        <div className="max-w-6xl mx-auto px-3 sm:px-6 lg:px-8 overflow-x-hidden">
             {/* Section Header */}
             <div className="text-center mb-8 sm:mb-12 md:mb-16">
                 <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-light mb-3 sm:mb-4 bg-gradient-to-r from-white via-cyan-200 to-blue-200 bg-clip-text text-transparent">
@@ -197,7 +197,7 @@ function Skills() {
 
             {/* Category Tabs - Mobile Optimized */}
             <div className="mb-8 sm:mb-12">
-                <div className="flex overflow-x-auto gap-1 sm:gap-2 pb-2 px-1 scrollbar-hide">
+                <div className="flex flex-wrap gap-1 sm:gap-2 pb-2 px-1">
                     {categories.map((category) => (
                         <button
                             key={category.id}
