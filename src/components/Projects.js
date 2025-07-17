@@ -12,7 +12,8 @@ function Projects() {
             technologies: ["React", "JavaScript", "Tailwind CSS", "Lucide React", "HTML5", "CSS3"],
             previewLink: "#",
             githubLink: "https://github.com/anjalibhimani/personal-portfolio-website.git",
-            category: "Frontend"
+            category: "Frontend",
+            year: "2025"
         }
     ];
 
@@ -51,6 +52,11 @@ function Projects() {
                                 <span className="px-2 py-1 sm:px-3 sm:py-1 bg-cyan-400/10 text-cyan-400 text-xs sm:text-sm rounded-full border border-cyan-400/20 backdrop-blur-sm font-medium">
                                     {project.category}
                                 </span>
+                                {project.year && (
+                                    <span className="text-xs text-cyan-400 font-semibold">
+                                {project.year}
+                                    </span>
+                                )}
                             </div>
 
                             {/* Overlay on hover */}
