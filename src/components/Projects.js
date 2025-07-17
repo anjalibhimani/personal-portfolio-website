@@ -53,7 +53,7 @@ function Projects() {
                                     {project.category}
                                 </span>
                                 {project.year && (
-                                    <span className="text-xs text-cyan-400 font-semibold">
+                                    <span className="px-2 py-1 sm:px-3 sm:py-1 bg-white/10 text-gray-100 text-xs sm:text-sm rounded-full border border-white/20 backdrop-blur-sm font-medium ml-2">
                                 {project.year}
                                     </span>
                                 )}
