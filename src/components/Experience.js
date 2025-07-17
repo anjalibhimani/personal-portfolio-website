@@ -1,3 +1,4 @@
+'use client';
 import React, { useState, useEffect, useRef } from 'react';
 import { Briefcase, Calendar, MapPin } from 'lucide-react';
 
