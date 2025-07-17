@@ -10,7 +10,7 @@ function Projects() {
         {
             title: "Interactive Portfolio Website",
             description: "A responsive portfolio website built with React, featuring animations, a typewriter effect, and an interactive contact form with a modern UI.",
-            image: "https://placehold.co/600x400/0F172A/38BDF8?text=Portfolio+Website&font-size=26",
+            image: "/images/portfolio-screenshot.jpg";
             technologies: ["React", "JavaScript", "Tailwind CSS", "Lucide React", "HTML5", "CSS3", "Git"],
             previewLink: "https://anjali-bhimani.com/",
             githubLink: "https://github.com/anjalibhimani/personal-portfolio-website.git",
@@ -18,9 +18,9 @@ function Projects() {
             year: "2025"
         },
         {
-            title: "ResNet-18 Garbage Classifier (Jetson)",
+            title: "ResNet-18 Garbage Classifier",
             description: "Developed and deployed a ResNet-18 deep learning model on NVIDIA Jetson to classify 12 types of garbage for enhanced recycling efforts.",
-            image: "https://placehold.co/600x400/0F172A/10B981?text=ResNet-18%0AGarbage+Classifier&font-size=26",
+            image: "/images/jetson-classifier.jpg",
             technologies: ["PyTorch", "ResNet-18", "ONNX", "Python", "Deep Learning", "NVIDIA Jetson", "jetson-inference"],
             previewLink: "https://www.youtube.com/watch?v=Z7oWlMCnnb0",
             githubLink: "https://github.com/anjalibhimani/final-project-repo.git",
@@ -80,7 +80,7 @@ function Projects() {
 
                         {/* writing the title at the top and then the desription below */}
                         <div className="p-4 sm:p-6">
-                            <h3 className="text-lg sm:text-xl font-medium text-white mb-2 sm:mb-3 group-hover:text-cyan-400 transition-colors duration-300 leading-tight">
+                            <h3 className="text-lg sm:text-xl font-medium text-white mb-2 sm:mb-3 group-hover:text-cyan-400 transition-colors duration-300 leading-tight font-semibold">
                                 {project.title}
                             </h3>
 
