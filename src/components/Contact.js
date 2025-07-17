@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Mail, Linkedin, Calendar, Send, User, AlertCircle, CheckCircle, Contact } from 'lucide-react';
+import { Mail, Linkedin, Calendar, Send, User, AlertCircle, CheckCircle, Contact as contactIcon } from 'lucide-react';
 
 function Contact() {
     // state to store the submission fields from the user
@@ -123,7 +123,7 @@ function Contact() {
             {/* connect section title + description */}
             <div className="text-center mb-16">
                 <h2 className="text-4xl md:text-5xl font-light mb-4 text-cyan-200">
-                    <Contact className="inline-block mr-3 text-cyan-200" size={40} />
+                    <contactIcon className="inline-block mr-3 text-cyan-200" size={40} />
                     Let&apos;s Connect
                 </h2>
                 <p className="text-lg text-gray-400 max-w-2xl mx-auto leading-relaxed">
