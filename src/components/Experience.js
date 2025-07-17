@@ -116,14 +116,14 @@ function Experience() {
                 <div className="relative">
 
                     {/* timeline line */}
-                    <div className="absolute left-2.5 md:left-6 top-0 bottom-0 w-0.5 bg-gradient-to-b from-cyan-400/50 via-blue-400/50 to-indigo-400/50"></div>
+                    <div className="hidden md:block absolute left-2.5 md:left-6 top-0 bottom-0 w-0.5 bg-gradient-to-b from-cyan-400/50 via-blue-400/50 to-indigo-400/50"></div>
 
                     <div className="space-y-16">
                         {experiences.map((exp, index) => (
                             <div
                                 key={index}
                                 ref={element => experienceRefs.current[index] = element}
-                                className={`experience-item relative pl-20 transition-all duration-700 ${visibleItems.includes(index)
+                                className={`experience-item relative md:pl-20 transition-all duration-700 ${visibleItems.includes(index)
                                     ? 'opacity-100 transform translate-x-0'
                                     : 'opacity-0 transform translate-x-10'
                                     }`}
@@ -131,44 +131,44 @@ function Experience() {
                                 style={{ transitionDelay: `${index * 200}ms` }}
                             >
                                 {/* timline bullet points for each experince */}
-                                <div className="absolute left-2.5 md:left-6 top-6 w-6 h-6 bg-gradient-to-r from-cyan-400 to-blue-400 rounded-full border-4 border-gray-900 z-10 shadow-lg shadow-cyan-400/50"></div>
+                                <div className="hidden md:block absolute left-2.5 md:left-6 top-6 w-6 h-6 bg-gradient-to-r from-cyan-400 to-blue-400 rounded-full border-4 border-gray-900 z-10 shadow-lg shadow-cyan-400/50"></div>
 
                                 {/* connecting the dots with a line */}
-                                <div className="absolute left-9 md:left-12 top-9 w-8 h-0.5 bg-gradient-to-r from-cyan-400 to-blue-400"></div>
+                                <div className="hidden md:block absolute left-9 md:left-12 top-9 w-8 h-0.5 bg-gradient-to-r from-cyan-400 to-blue-400"></div>
 
                                 {/* cards for the experinces */}
                                 <div className="group bg-gray-800/50 backdrop-blur-sm rounded-xl border border-gray-700/50 hover:border-cyan-400/30 transition-all duration-300 hover:shadow-lg hover:shadow-cyan-400/10 overflow-hidden">
 
                                     {/* display company logo and also full official name */}
                                     <div className="p-6 pb-4">
-                                        <div className="flex flex-col md:flex-row items-start md:items-center justify-between mb-4">
-                                            <div className="flex items-center space-x-4 mb-4 md:mb-0">
+                                        <div className="flex flex-col md:flex-row items-start items-start sm:items-center justify-between mb-4">
+                                            <div className="flex flex-col sm:flex-row items-start sm:items-center space-y-3 sm:space-y-0 sm:space-x-4 mb-4 md:mb-0">
                                                 <img
                                                     src={exp.logo}
                                                     alt={`${exp.company} logo`}
-                                                    className={`w-24 h-24 rounded-lg border border-gray-600/50 ${exp.company === 'Philip Morris International' ? 'bg-white' : ''}`}
+                                                    className={`w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 rounded-lg border border-gray-600/50 flex-shrink-0 ${exp.company === 'Philip Morris International' ? 'bg-white' : ''}`}
                                                 />
-                                                <div>
-                                                    <h3 className="text-xl font-semibold text-white mb-1 group-hover:text-cyan-400 transition-colors duration-300">
+                                                <div className="min-w-0 flex-1">
+                                                    <h3 className="text-lg sm:text-xl font-semibold text-white mb-1 group-hover:text-cyan-400 transition-colors duration-300">
                                                         {exp.title}
                                                     </h3>
-                                                    <p className="text-cyan-400 font-medium text-lg">{exp.company}</p>
+                                                    <p className="text-cyan-400 font-medium text-base sm:text-lg">{exp.company}</p>
                                                 </div>
                                             </div>
-                                            <span className="px-3 py-1 bg-cyan-400/10 text-cyan-400 text-sm rounded-full border border-cyan-400/20 font-medium self-end md:self-auto">
+                                            <span className="px-3 py-1 bg-cyan-400/10 text-cyan-400 text-sm rounded-full border border-cyan-400/20 font-medium self-start md:self-auto flex-shrink-0">
                                                 {exp.type}
                                             </span>
                                         </div>
 
                                         {/* where and the dates for my experience */}
-                                        <div className="flex items-center space-x-4 text-sm text-gray-400 mb-4">
+                                        <div className="flex flex-col sm:flex-row items-start sm:items-center space-y-2 sm:space-y-0 sm:space-x-4 text-sm text-gray-400 mb-4">
                                             <div className="flex items-center">
-                                                <MapPin size={16} className="mr-1" />
-                                                {exp.location}
+                                                <MapPin size={16} className="mr-1 flex-shrink-0" />
+                                                <span className="truncate">{exp.location}</span>
                                             </div>
                                             <div className="flex items-center">
-                                                <Calendar size={16} className="mr-1" />
-                                                {exp.period}
+                                                <Calendar size={16} className="mr-1 flex-shrink-0" />
+                                                <span className="truncate">{exp.period}</span>
                                             </div>
                                         </div>
                                     </div>
@@ -178,7 +178,7 @@ function Experience() {
                                         <ul className="space-y-3 mb-6">
                                             {exp.achievements.map((achievement, i) => (
                                                 <li key={i} className="text-gray-300 flex items-start leading-relaxed">
-                                                    <span className="text-cyan-400 mr-3 mt-1.5 text-xs">▶</span>
+                                                    <span className="text-cyan-400 mr-3 mt-1.5 text-xs flex-shrink-0">▶</span>
                                                     <span className="group-hover:text-gray-200 transition-colors duration-300">
                                                         {achievement}
                                                     </span>
@@ -189,7 +189,7 @@ function Experience() {
                                         {/* the skills I gained during the experience */}
                                         <div className="flex flex-wrap gap-2">
                                             {exp.skills.map((skill, i) => (
-                                                <span key={i} className="px-3 py-1 bg-gray-700/50 text-gray-300 text-xs rounded-md border border-gray-600/50 font-medium hover:border-cyan-400/30 transition-colors duration-300">
+                                                <span key={i} className="px-2 md:px-3 py-1 bg-gray-700/50 text-gray-300 text-xs rounded-md border border-gray-600/50 font-medium hover:border-cyan-400/30 transition-colors duration-300">
                                                     {skill}
                                                 </span>
                                             ))}
