@@ -20,7 +20,7 @@ function Projects() {
         {
             title: "ResNet-18 Garbage Classifier (Jetson)",
             description: "Developed and deployed a ResNet-18 deep learning model on NVIDIA Jetson to classify 12 types of garbage for enhanced recycling efforts.",
-            image: "https://placehold.co/600x400/0F172A/10B981?text=ResNet-18+Garbage+Classifier&font-size=24",
+            image: "https://placehold.co/600x400/0F172A/10B981?text=ResNet-18+Garbage+Classifier&font-size=40",
             technologies: ["PyTorch", "ResNet-18", "ONNX", "Python", "Deep Learning", "NVIDIA Jetson", "jetson-inference"],
             previewLink: "https://www.youtube.com/watch?v=Z7oWlMCnnb0",
             githubLink: "https://github.com/anjalibhimani/final-project-repo.git",
