@@ -17,13 +17,13 @@ function Projects() {
     ];
 
     return (
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-7xl mx-auto px-4 md:px-6">
             {/* Section Header */}
             <div className="text-center mb-16">
-                <h2 className="text-4xl md:text-5xl font-light mb-4 bg-gradient-to-r from-white via-cyan-200 to-blue-200 bg-clip-text text-transparent">
+                <h2 className="text-3xl md:text-4xl lg:text-5xl font-light mb-4 bg-gradient-to-r from-white via-cyan-200 to-blue-200 bg-clip-text text-transparent">
                     Independent Projects
                 </h2>
-                <p className="text-lg text-gray-400 max-w-2xl mx-auto leading-relaxed whitespace-nowrap">
+                <p className="text-base md:text-lg text-gray-400 max-w-2xl mx-auto leading-relaxed px-2">
                     Recent projects showcasing my growing skills in web development and creative problem-solving
                 </p>
             </div>
@@ -38,7 +38,7 @@ function Projects() {
                         onMouseLeave={() => setHoveredProject(null)}
                     >
                         {/* Project Image */}
-                        <div className="relative h-40 sm:h-48 overflow-hidden">
+                        <div className="relative h-48 sm:h-52 md:h-48 overflow-hidden">
                             <img
                                 src={project.image}
                                 alt={project.title}
@@ -70,17 +70,14 @@ function Projects() {
 
                             {/* Technologies */}
                             <div className="flex flex-wrap gap-1 sm:gap-2 mb-4 sm:mb-6">
-                                {project.technologies.slice(0, 4).map((tech, i) => (
-                                    <span key={i} className="px-2 py-1 bg-gray-700/50 text-gray-300 text-xs rounded-md border border-gray-600/50 font-medium">
-                                        {tech}
-                                    </span>
-                                ))}
-                                {project.technologies.length > 4 && (
-                                    <span className="px-2 py-1 bg-gray-700/50 text-gray-400 text-xs rounded-md border border-gray-600/50">
-                                        +{project.technologies.length - 4}
-                                    </span>
-                                )}
-                            </div>
+                            {project.technologies.map((tech, i) => (
+                                <span
+                                key={i}
+                                className="px-2 py-1 bg-gray-700/50 text-gray-300 text-xs rounded-md border border-gray-600/50 font-medium"
+                                    >
+                                {tech}
+                                    </span> ))}
+                             </div>
 
                             {/* Action Buttons */}
                             <div className="flex flex-col sm:flex-row gap-2 sm:gap-3">
