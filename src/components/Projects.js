@@ -10,7 +10,7 @@ function Projects() {
         {
             title: "Interactive Portfolio Website",
             description: "A responsive portfolio website built with React, featuring animations, a typewriter effect, and an interactive contact form with a modern UI.",
-            image: "/images/portfolio-screenshot.jpg";
+            image: "/portfolio-project-image.png";
             technologies: ["React", "JavaScript", "Tailwind CSS", "Lucide React", "HTML5", "CSS3", "Git"],
             previewLink: "https://anjali-bhimani.com/",
             githubLink: "https://github.com/anjalibhimani/personal-portfolio-website.git",
@@ -20,7 +20,7 @@ function Projects() {
         {
             title: "ResNet-18 Garbage Classifier",
             description: "Developed and deployed a ResNet-18 deep learning model on NVIDIA Jetson to classify 12 types of garbage for enhanced recycling efforts.",
-            image: "/images/jetson-classifier.jpg",
+            image: "nvidia-project-image.png",
             technologies: ["PyTorch", "ResNet-18", "ONNX", "Python", "Deep Learning", "NVIDIA Jetson", "jetson-inference"],
             previewLink: "https://www.youtube.com/watch?v=Z7oWlMCnnb0",
             githubLink: "https://github.com/anjalibhimani/final-project-repo.git",
