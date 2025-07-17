@@ -240,7 +240,7 @@ function Skills() {
                             style={{ transitionDelay: `${index * 100}ms` }}
                         >
                             {activeCategory === 'softSkills' ? (
-                                <div className="group bg-gray-800/50 backdrop-blur-sm rounded-xl border border-gray-700/50 hover:border-cyan-400/30 transition-all duration-300 hover:shadow-lg hover:shadow-cyan-400/10 p-3 sm:p-4 relative overflow-hidden flex flex-col min-h-[120px] sm:min-h-[140px]">
+                                <div className="group bg-gray-800/50 backdrop-blur-sm rounded-xl border border-gray-700/50 hover:border-cyan-400/30 transition-all duration-300 hover:shadow-lg hover:shadow-cyan-400/10 p-3 sm:p-4 relative overflow-hidden flex flex-col w-full box-border min-h-[120px] sm:min-h-[140px]">
                                     {/* Gradient overlay */}
                                     <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/5 via-transparent to-blue-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
 
@@ -258,7 +258,7 @@ function Skills() {
                                     <div className="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-cyan-400/0 via-cyan-400/20 to-cyan-400/0 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></div>
                                 </div>
                             ) : (
-                                <div className={`group bg-gray-800/50 backdrop-blur-sm rounded-xl border border-gray-700/50 hover:border-cyan-400/30 transition-all duration-300 hover:shadow-lg hover:shadow-cyan-400/10 p-3 sm:p-4 relative overflow-hidden flex flex-col ${skill.year ? 'min-h-[180px] sm:min-h-[200px]' : 'min-h-[150px] sm:min-h-[170px]'}`}>
+                                <div className={`group bg-gray-800/50 backdrop-blur-sm rounded-xl border border-gray-700/50 hover:border-cyan-400/30 transition-all duration-300 hover:shadow-lg hover:shadow-cyan-400/10 p-3 sm:p-4 relative overflow-hidden flex flex-col w-full box-border ${skill.year ? 'min-h-[180px] sm:min-h-[200px]' : 'min-h-[150px] sm:min-h-[170px]'}`}>
                                     {/* Gradient overlay */}
                                     <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/5 via-transparent to-blue-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
 
