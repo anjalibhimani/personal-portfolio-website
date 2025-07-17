@@ -218,13 +218,13 @@ function Skills() {
             </div>
 
             {/* Skills Grid */}
-            <div className="bg-gray-800/30 backdrop-blur-sm rounded-xl border border-gray-700/50 p-3 sm:p-4 md:p-6 lg:p-8">
+            <div className="bg-gray-800/30 backdrop-blur-sm rounded-xl border border-gray-700/50 p-2 sm:p-4 md:p-6 lg:p-8">
                 <div className="flex items-center mb-4 sm:mb-6 md:mb-8">
                     <Icon className="text-cyan-400 mr-2 sm:mr-3 flex-shrink-0" size={20} />
                     <h3 className="text-base sm:text-lg md:text-xl lg:text-2xl font-medium text-white leading-tight">{currentCategory.title}</h3>
                 </div>
 
-                <div className={`grid gap-3 sm:gap-4 ${
+                <div className={`w-full grid gap-3 sm:gap-4 ${
                     activeCategory === 'softSkills' 
                         ? 'grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5' 
                         : 'grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4'
@@ -240,16 +240,16 @@ function Skills() {
                             style={{ transitionDelay: `${index * 100}ms` }}
                         >
                             {activeCategory === 'softSkills' ? (
-                                <div className="group bg-gray-800/50 backdrop-blur-sm rounded-xl border border-gray-700/50 hover:border-cyan-400/30 transition-all duration-300 hover:shadow-lg hover:shadow-cyan-400/10 p-3 sm:p-4 relative overflow-hidden flex flex-col w-full box-border min-h-[120px] sm:min-h-[140px]">
+                                <div className="group bg-gray-800/50 backdrop-blur-sm rounded-xl border border-gray-700/50 hover:border-cyan-400/30 transition-all duration-300 hover:shadow-lg hover:shadow-cyan-400/10 p-2 sm:p-4 relative overflow-hidden flex flex-col w-full box-border min-h-[80px] sm:min-h-[120px]">
                                     {/* Gradient overlay */}
                                     <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/5 via-transparent to-blue-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
 
                                     {/* Skill content */}
-                                    <div className="relative z-10 flex-grow flex flex-col justify-center text-center min-w-0">
+                                    <div className="relative z-10 flex flex-col justify-center text-center min-w-0">
                                         <h4 className="text-white font-semibold text-sm sm:text-base lg:text-lg mb-2 transition-colors duration-300 leading-tight">
                                             {skill.name}
                                         </h4>
-                                        <p className="text-gray-400 text-xs sm:text-sm leading-relaxed transition-colors duration-300 flex-grow">
+                                        <p className="text-gray-400 text-xs sm:text-sm leading-relaxed transition-colors duration-300 flex">
                                             {skill.description}
                                         </p>
                                     </div>
@@ -258,7 +258,7 @@ function Skills() {
                                     <div className="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-cyan-400/0 via-cyan-400/20 to-cyan-400/0 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></div>
                                 </div>
                             ) : (
-                                <div className={`group bg-gray-800/50 backdrop-blur-sm rounded-xl border border-gray-700/50 hover:border-cyan-400/30 transition-all duration-300 hover:shadow-lg hover:shadow-cyan-400/10 p-3 sm:p-4 relative overflow-hidden flex flex-col w-full box-border ${skill.year ? 'min-h-[180px] sm:min-h-[200px]' : 'min-h-[150px] sm:min-h-[170px]'}`}>
+                                <div className={`group bg-gray-800/50 backdrop-blur-sm rounded-xl border border-gray-700/50 hover:border-cyan-400/30 transition-all duration-300 hover:shadow-lg hover:shadow-cyan-400/10 p-3 sm:p-4 relative overflow-hidden flex flex-col w-full box-border ${skill.year ? 'min-h-[100px] sm:min-h-[180px]' : 'min-h-[150px] sm:min-h-[170px]'}`}>
                                     {/* Gradient overlay */}
                                     <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/5 via-transparent to-blue-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
 
@@ -283,11 +283,11 @@ function Skills() {
                                     </div>
 
                                     {/* Skill text */}
-                                    <div className="relative z-10 flex-grow flex flex-col text-center min-w-0">
+                                    <div className="relative z-10 flex flex-col text-center min-w-0">
                                         <h4 className="text-white font-semibold text-sm sm:text-base mb-2 transition-colors duration-300 leading-tight">
                                             {skill.name}
                                         </h4>
-                                        <p className="text-gray-400 text-xs sm:text-sm leading-relaxed transition-colors duration-300 flex-grow">
+                                        <p className="text-gray-400 text-xs sm:text-sm leading-relaxed transition-colors duration-300 flex">
                                             {skill.description}
                                         </p>
 
