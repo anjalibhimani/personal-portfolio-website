@@ -166,11 +166,6 @@ function Skills() {
                     description: "2nd place at 2022 Swiss Qualifications",
                     logo: "https://robotics.nasa.gov/wp-content/uploads/2020/04/vex_robotics_logo.png",
                     year: "2022"
-                },
-                {
-                    name: "Agile/Scrum",
-                    description: "Project Management",
-                    logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Scrum_logo.svg/1200px-Scrum_logo.svg.png"
                 }
             ]
         },
