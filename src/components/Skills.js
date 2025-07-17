@@ -185,14 +185,14 @@ function Skills() {
     return (
         <div className="max-w-6xl mx-auto px-3 sm:px-6 lg:px-8 overflow-x-hidden">
             {/* Section Header */}
-            <div className="text-center mb-8 sm:mb-12 md:mb-16">
-                <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-light mb-3 sm:mb-4 bg-gradient-to-r from-white via-cyan-200 to-blue-200 bg-clip-text text-transparent">
+            <div className="text-center mb-16">
+                <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-light mb-3 sm:mb-4 text-cyan-400">
                     <Brain className="inline-block mr-2 text-cyan-400" size={40} />
                     Skills
                 </h2>
                 <p className="text-sm sm:text-base md:text-lg text-gray-400 max-w-2xl mx-auto leading-relaxed px-2">
                     An overview of my technical and professional skills
-                </p>
+                </p>  
             </div>
 
             {/* Category Tabs - Mobile Optimized */}
@@ -241,7 +241,7 @@ function Skills() {
                         >
                             {activeCategory === 'softSkills' ? (
                                 <div className="group bg-gray-800/50 backdrop-blur-sm rounded-xl border border-gray-700/50 hover:border-cyan-400/30 transition-all duration-300 hover:shadow-lg hover:shadow-cyan-400/10 p-2 sm:p-4 relative overflow-hidden flex flex-col w-full box-border min-h-[80px] sm:min-h-[120px]">
-                                    {/* Gradient overlay */}
+                                    {/* gradient overlay */}
                                     <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/5 via-transparent to-blue-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
 
                                     {/* Skill content */}
