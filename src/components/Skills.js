@@ -53,9 +53,29 @@ function Skills() {
                     logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
                 },
                 {
-                    name: "GitHub",
+                    name: "Git",
                     description: "Version Control & Collaboration",
                     logo: "https://github.githubassets.com/assets/GitHub-Mark-ea2971cee799.png"
+                },
+                {
+                    name: "PyTorch",
+                    description: "Deep Learning Framework",
+                    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pytorch/pytorch-original.svg"
+                },
+                {
+                    name: "ONNX",
+                    description: "ML Model Interoperability",
+                    logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxV0Jtl2e95pnUb3kKPoGdhUVYCqGZXlB95A&s"
+                },
+                {
+                    name: "Deep Learning",
+                    description: "Neural Networks",
+                    logo: "https://cdn-icons-png.flaticon.com/512/8637/8637099.png"
+                },
+                {
+                    name: "Computer Vision",
+                    description: "Image Processing",
+                    logo: "https://cdn-icons-png.flaticon.com/512/5464/5464615.png"
                 }
             ]
         },
