@@ -63,6 +63,11 @@ function Skills() {
                     logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pytorch/pytorch-original.svg"
                 },
                 {
+                    name: "Java",
+                    description: "Object-Oriented Programming",
+                    logo: "https://cdn4.iconfinder.com/data/icons/logos-and-brands/512/181_Java_logo_logos-512.png"
+                },
+                {
                     name: "ONNX",
                     description: "ML Model Interoperability",
                     logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxV0Jtl2e95pnUb3kKPoGdhUVYCqGZXlB95A&s"
