@@ -17,43 +17,8 @@ This is my modern, responsive personal portfolio website that I built with React
 - Other external integrations used: Calendly integration to schedule a meeting
 
 **Project Structure**
-Note: the public folder 
-├── 📁 public/
-│   ├── 📄 Fall-2024-Resumé.pdf
-│   ├── 📄 file.svg
-│   ├── 📄 globe.svg
-│   ├── 📄 next.svg
-│   ├── 📄 nvidia-project-image.png
-│   ├── 📄 portfolio-pic.png
-│   ├── 📄 portfolio-website-image.png
-│   ├── 📄 portoflio-picture.jpeg
-│   ├── 📄 vercel.svg
-│   ├── 📄 window.svg
-├── 📁 src/
-│   ├── 📁 app/
-│   │   ├── 📄 favicon.ico
-│   │   ├── 📄 globals.css
-│   │   ├── 📄 layout.js
-│   │   └── 📄 page.js
-│   └── 📁 components/
-│       ├── 📄 About.js
-│       ├── 📄 Contact.js
-│       ├── 📄 Experience.js
-│       ├── 📄 Footer.js
-│       ├── 📄 Header.js
-│       ├── 📄 Projects.js
-│       ├── 📄 Skills.js
-│       └── 📄 TypeWriter.js
-├── 📄 .gitignore
-├── 📄 README.md
-├── 📄 eslint.config.mjs
-├── 📄 jsconfig.json
-├── 📄 next.config.mjs
-├── 📄 package-lock.json
-├── 📄 package.json
-├── 📄 postcss.config.js
-├── 📄 postcss.config.mjs
-└── 📄 tailwind.config.js
+
+<img width="211" height="490" alt="Screenshot 2025-07-18 at 14 47 25" src="https://github.com/user-attachments/assets/721c3c77-5549-44e5-bbc9-ebbf72f829da" />
 
 **Installation**
 1. Clone the repository
