@@ -76,38 +76,51 @@ function Skills() {
             skills: [
                 {
                     name: "Communication",
-                    description: "Effective communication skills",
-                    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/slack/slack-original.svg"
+                    description: "Effective communication skills"
                 },
                 {
                     name: "Leadership",
                     description: "Team leadership and motivation",
-                    logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Leadership_icon.svg/1200px-Leadership_icon.svg.png"
                 },
                 {
                     name: "Writing",
                     description: "Technical and academic writing",
-                    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"
                 },
                 {
                     name: "Research",
                     description: "Analytical and applied research",
-                    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg"
                 },
                 {
                     name: "Critical Thinking",
                     description: "Objective analysis to evaluate issues",
-                    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jenkins/jenkins-original.svg"
                 },
                 {
                     name: "Collaboration",
                     description: "Teamwork and cooperative skills",
-                    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/terraform/terraform-original.svg"
                 },
                 {
                     name: "Problem Solving",
                     description: "Identifying solutions to challenges",
-                    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/terraform/terraform-original.svg"
+                },
+                {
+                    name: "Time Management",
+                    description: "Effectively prioritizing tasks and deadlines",
+                },
+                {
+                    name: "Creativity",
+                    description: "Innovative thinking and ideas",
+                },
+                {
+                    name: "Decision-Making",
+                    description: "Making informed choices",
+                },
+                {
+                    name: "Resilience",
+                    description: "Handling setbacks effectively",
+                },
+                {
+                    name: "Digital Fluency",
+                    description: "Comfort with digital tools",
                 }
             ]
         },
@@ -185,7 +198,12 @@ function Skills() {
         { id: 'certifications', label: 'Certifications, Awards, & Courses', icon: Award }
     ];
 
-    const currentCategory = skillCategories[activeCategory];
+    // sorting the categories alphabetically
+    const currentCategory = {
+        ...skillCategories[activeCategory],
+        skills: [...skillCategories[activeCategory].skills].sort((a, b) => a.name.localeCompare(b.name))
+    };
+    
     const Icon = currentCategory.icon;
 
     return (
