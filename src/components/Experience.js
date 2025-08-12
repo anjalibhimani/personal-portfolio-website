@@ -60,7 +60,7 @@ function Experience() {
              "Slack-Based Support Bot Feasibility : Assessed the feasibility of a Slack-integrated support chatbot with a Notion backend. Compared third-party and custom solutions, outlining trade-offs in budget, data governance, and technical constraints.",
              "Pharmaceutical Order Sheet Optimization : Investigated backend processes for medical order sheet updates. Identified systemic platform limitations, leading to project discontinuation."
             ],
-            skills: ["JavaScript", "Google Apps Script", "Data Analysis", "Workflow Automation", "Cost Analysis & Financial Forecasting", "Technical Research", "Process Optimization", "Project Coordination"]
+            skills: ["JavaScript", "Google Apps Script", "Data Analysis", "Slack Workflow Builder", "Workflow Automation", "Cost Analysis & Financial Forecasting", "Technical Research", "Process Optimization", "Project Coordination"]
         },
         {
             title: "Illicit Trade Prevention Intern",
