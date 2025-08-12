@@ -50,12 +50,15 @@ function Experience() {
             type: "Internship",
             logo: "https://media.licdn.com/dms/image/v2/D4E0BAQHLinna1bHVvA/company-logo_200_200/company-logo_200_200/0/1704982116415/formelskin_logo?e=2147483647&v=beta&t=ks9aZfoWcogPtXx1YFrzRj6Ugn205OLdk17So6r8t3c",
             achievements: [
-                "Analyzed and compared features and capabilities of two customer communication platforms to support the company’s initiative to incorporate AI technologies, including AI agents",
-                "Performed a detailed cost analysis of different platform components and used current expenditures to project potential savings",
-                "Assessed limitations of the current platform in supporting AI-driven workflows and identified key operational inefficiencies affecting overall performance and user experience",
-                "Engaged in technical discussions with platform providers to clarify requirements and integration steps",
-                "Developed and automated the Learning & Development budget request process using JavaScript-based Google Apps Script, implementing event-driven triggers, data validation, and persistent data storage in Google Sheets with automated email notifications",
-                "Automated L&D budget renewals using Google Apps Script, implementing daily triggers to calculate budget allocations based on employee join date, tier, and hours worked, with real-time updates to a centralized spreadsheet tracking all budgets"
+             "AI Tool Implementation : Evaluated two customer communication platforms for AI and agent-based workflow integration. Conducted technical and financial assessments, identified infrastructure limitations, and collaborated with vendors to define functional and performance requirements. Designed an implementation plan to automate 30% of customer inquiries through AI-driven resolution.",
+             "L&D Budget Automation : Engineered a dynamic budget request system using Google Apps Script (JavaScript) with event-driven triggers, input validation, and persistent state storage. Implemented tier-based recalculations and automated dashboard updates, reducing manual processing by 80%.",
+             "Reference Letter Automation : Architected a trigger-based, multi-layered workflow for HR reference letters, automating email routing, data validation, and delivery to improve accuracy and processing speed.",
+             "Personnel Request Optimization : Built a centralized personnel request system with conditional branching and automated approval flows, linked to dynamic tracking in Google Sheets to streamline processes and eliminate manual routing.",
+             "Cost Request Optimization: Developed an event-driven cost approval workflow for the Finance team, with automated email generation, embedded controls, escalation logic, and spreadsheet-based tracking.",
+             "Onboarding Slack Workflow: Automated a Slack-based process delivering scheduled, stage-specific messages to new hires. Ensured timely access to key information, reducing HR follow-ups and improving the onboarding experience.",
+             "Employee Benefits Strategy : Synthesized quantitative and qualitative data from the 2025 Benefits Survey. Delivered a multi-phase benefits strategy through a formal presentation deck.",
+             "Slack-Based Support Bot Feasibility : Assessed the feasibility of a Slack-integrated support chatbot with a Notion backend. Compared third-party and custom solutions, outlining trade-offs in budget, data governance, and technical constraints.",
+             "Pharmaceutical Order Sheet Optimization : Investigated backend processes for medical order sheet updates. Identified systemic platform limitations, leading to project discontinuation."
             ],
             skills: ["JavaScript", "Google Apps Script", "Data Analysis", "Workflow Automation", "Cost Analysis & Financial Forecasting", "Technical Research", "Process Optimization", "Project Coordination"]
         },
